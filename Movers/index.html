@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EC Movers. — Professional moving services. Residential, commercial, and long-distance moves done right. Fully insured, flat-rate pricing, 5-star rated." />
+  <title>EC Movers. — Professional Movers</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <header id="nav">
+    <div class="wrap nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-mark">🚛</div>
+        EC Movers.
+      </a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#locations">Locations</a>
+      </nav>
+      <div class="nav-right">
+        <a href="#quote" class="btn btn-red">Get Free Quote</a>
+        <button class="ham" id="hamBtn" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="m-drawer" id="mDrawer" role="dialog" aria-label="Navigation menu">
+    <a href="#services"  onclick="closeDrawer()">Services</a>
+    <a href="#why"       onclick="closeDrawer()">Why Us</a>
+    <a href="#reviews"   onclick="closeDrawer()">Reviews</a>
+    <a href="#locations" onclick="closeDrawer()">Locations</a>
+    <a href="tel:+12269999999" onclick="closeDrawer()">📞 Call Now</a>
+    <a href="#quote" class="btn btn-red m-cta" onclick="closeDrawer()">Get Free Quote →</a>
+  </div>
+
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section id="hero">
+    <div class="hero-dots"></div>
+    <div class="hero-ring hero-ring-1"></div>
+    <div class="hero-ring hero-ring-2"></div>
+    <div class="hero-glow"></div>
+
+    <div class="wrap">
+      <div class="hero-inner">
+
+        <!-- Left copy -->
+        <div>
+          <div class="hero-badge">
+            <span class="hero-dot"></span>
+            Trusted Since 2015 &middot; Fully Insured &middot; 5-Star Rated
+          </div>
+
+          <h1 class="hero-h1">
+            Moving Made
+            <span class="red">Simple.</span>
+            <span class="ghost">Stress-Free.</span>
+          </h1>
+
+          <p class="hero-sub">
+            Professional moving services built on transparency and genuine care.
+            Residential, commercial, and long-distance — we handle every move with precision.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#quote" class="btn btn-red btn-lg">📋 Get a Free Quote</a>
+            <a href="tel:+12269999999" class="btn btn-outline-w btn-lg">📞 (226) 999-9999</a>
+          </div>
+
+          <div class="hero-divider">
+            <div class="h-stat">
+              <div class="n"><span id="s1">0</span><span class="acc">★</span></div>
+              <div class="l">Avg Rating</div>
+            </div>
+            <div class="h-stat">
+              <div class="n"><span id="s2">0</span>+</div>
+              <div class="l">Happy Clients</div>
+            </div>
+            <div class="h-stat">
+              <div class="n"><span id="s3">0</span>+</div>
+              <div class="l">Years Experience</div>
+            </div>
+            <div class="h-stat">
+              <div class="n"><span id="s4">0</span>+</div>
+              <div class="l">Five-Star Reviews</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right floating cards (desktop only) -->
+        <div class="hero-cards">
+          <div class="glass">
+            <div class="glass-lbl">Customer Satisfaction</div>
+            <div class="rating-big">4.9</div>
+            <div class="stars-row">★★★★★</div>
+            <div class="rev-count">Based on 1,500+ reviews</div>
+            <div class="mini-quote">"The most professional movers I've ever hired. On time, careful, and genuinely kind."</div>
+            <div class="mini-auth">— Sarah K., Local Move</div>
+          </div>
+          <div class="red-card">
+            <div class="glass-lbl" style="color:rgba(255,255,255,.7)">Coverage</div>
+            <div class="red-row">
+              <div><div class="rn">50+</div><div class="rl">Cities Served</div></div>
+              <div><div class="rn">24/7</div><div class="rl">Available</div></div>
+              <div><div class="rn">100%</div><div class="rl">Insured</div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════ MARQUEE ══════════════ -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="m-item">Residential Moving <span class="m-sep">●</span></div>
+      <div class="m-item">Commercial Relocation <span class="m-sep">●</span></div>
+      <div class="m-item">Long Distance Moving <span class="m-sep">●</span></div>
+      <div class="m-item">Piano &amp; Specialty <span class="m-sep">●</span></div>
+      <div class="m-item">Senior Moving <span class="m-sep">●</span></div>
+      <div class="m-item">Packing &amp; Storage <span class="m-sep">●</span></div>
+      <div class="m-item">Fully Insured <span class="m-sep">●</span></div>
+      <div class="m-item">Flat-Rate Pricing <span class="m-sep">●</span></div>
+      <!-- duplicate for seamless loop -->
+      <div class="m-item">Residential Moving <span class="m-sep">●</span></div>
+      <div class="m-item">Commercial Relocation <span class="m-sep">●</span></div>
+      <div class="m-item">Long Distance Moving <span class="m-sep">●</span></div>
+      <div class="m-item">Piano &amp; Specialty <span class="m-sep">●</span></div>
+      <div class="m-item">Senior Moving <span class="m-sep">●</span></div>
+      <div class="m-item">Packing &amp; Storage <span class="m-sep">●</span></div>
+      <div class="m-item">Fully Insured <span class="m-sep">●</span></div>
+      <div class="m-item">Flat-Rate Pricing <span class="m-sep">●</span></div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════ SERVICES ══════════════ -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-split">
+
+        <div class="sec-sticky sr sr-l">
+          <div class="eyebrow">What We Do</div>
+          <h2 class="sec-h2">Every Move,<br />Done Right.</h2>
+          <p class="sec-sub">From single-room apartments to full corporate relocations, we bring the same level of professionalism to every job.</p>
+          <a href="#quote" class="sec-link">Get a Quote ↗</a>
+        </div>
+
+        <div class="svc-list">
+          <div class="svc sr" data-d="1">
+            <div class="svc-n">01</div>
+            <div class="svc-info">
+              <h3>Residential Moving</h3>
+              <p>Apartments, condos, and homes. We pack, load, transport, and set up with care.</p>
+            </div>
+            <div class="svc-right"><div class="svc-ico">🏠</div><span class="svc-arr">→</span></div>
+          </div>
+          <div class="svc sr" data-d="2">
+            <div class="svc-n">02</div>
+            <div class="svc-info">
+              <h3>Commercial Moving</h3>
+              <p>Office relocations with minimal downtime. We reassemble your workspace efficiently.</p>
+            </div>
+            <div class="svc-right"><div class="svc-ico">🏢</div><span class="svc-arr">→</span></div>
+          </div>
+          <div class="svc sr" data-d="3">
+            <div class="svc-n">03</div>
+            <div class="svc-info">
+              <h3>Long Distance Moving</h3>
+              <p>Across provinces or the country — one truck, one driver, zero transfers.</p>
+            </div>
+            <div class="svc-right"><div class="svc-ico">🛣️</div><span class="svc-arr">→</span></div>
+          </div>
+          <div class="svc sr" data-d="4">
+            <div class="svc-n">04</div>
+            <div class="svc-info">
+              <h3>Piano &amp; Specialty Moving</h3>
+              <p>Grand pianos, pool tables, hot tubs — specialist gear for heavy and delicate items.</p>
+            </div>
+            <div class="svc-right"><div class="svc-ico">🎹</div><span class="svc-arr">→</span></div>
+          </div>
+          <div class="svc sr" data-d="5">
+            <div class="svc-n">05</div>
+            <div class="svc-info">
+              <h3>Senior Moving</h3>
+              <p>Patient, compassionate service for seniors with full family coordination.</p>
+            </div>
+            <div class="svc-right"><div class="svc-ico">💛</div><span class="svc-arr">→</span></div>
+          </div>
+          <div class="svc sr" data-d="5">
+            <div class="svc-n">06</div>
+            <div class="svc-info">
+              <h3>Packing &amp; Storage</h3>
+              <p>Full or partial packing with quality materials. Secure short and long-term storage.</p>
+            </div>
+            <div class="svc-right"><div class="svc-ico">📦</div><span class="svc-arr">→</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════ WHY US ══════════════ -->
+  <section id="why">
+    <div class="wrap">
+      <div class="sr">
+        <div class="eyebrow">Why EC Movers.</div>
+        <h2 class="sec-h2">Built on Trust,<br />Driven by Results.</h2>
+      </div>
+
+      <div class="why-layout">
+
+        <!-- Process steps -->
+        <div class="proc sr sr-l">
+          <div class="p-step">
+            <div class="p-left"><div class="p-num">01</div><div class="p-line"></div></div>
+            <div class="p-body"><h4>Request a Free Quote</h4><p>Fill in our quick form and receive an honest, flat-rate estimate with no hidden fees — within hours.</p></div>
+          </div>
+          <div class="p-step">
+            <div class="p-left"><div class="p-num">02</div><div class="p-line"></div></div>
+            <div class="p-body"><h4>Confirm &amp; Schedule</h4><p>Lock in your date with a small deposit. We handle all logistics and planning for you.</p></div>
+          </div>
+          <div class="p-step">
+            <div class="p-left"><div class="p-num">03</div><div class="p-line"></div></div>
+            <div class="p-body"><h4>We Arrive &amp; Execute</h4><p>Our crew shows up on time, fully equipped, and keeps you updated throughout the move.</p></div>
+          </div>
+          <div class="p-step">
+            <div class="p-left"><div class="p-num">04</div></div>
+            <div class="p-body"><h4>Settle In &amp; Enjoy</h4><p>We set up your new space and leave it clean. You just relax and enjoy your fresh start.</p></div>
+          </div>
+        </div>
+
+        <!-- Perk cards -->
+        <div class="perks sr sr-r">
+          <div class="perk" data-d="1"><div class="perk-ico">🛡️</div><h4>Fully Insured</h4><p>Complete liability coverage and WSIB certification. Your belongings are always protected.</p></div>
+          <div class="perk" data-d="2"><div class="perk-ico">💰</div><h4>Flat-Rate Pricing</h4><p>One honest price upfront. No hidden charges or last-minute surprises on moving day.</p></div>
+          <div class="perk" data-d="3"><div class="perk-ico">⚡</div><h4>Always On Time</h4><p>We respect your schedule. Our crews arrive punctually and work with focused efficiency.</p></div>
+          <div class="perk" data-d="4"><div class="perk-ico">📞</div><h4>24/7 Support</h4><p>Moving emergencies don't keep office hours. We're reachable around the clock.</p></div>
+          <div class="perk" data-d="3"><div class="perk-ico">🌟</div><h4>Award-Winning</h4><p>Consistently ranked #1 in customer satisfaction in our local community for 5+ years.</p></div>
+          <div class="perk" data-d="4"><div class="perk-ico">♻️</div><h4>Eco-Conscious</h4><p>Reusable tote rentals and route efficiency to reduce our environmental footprint.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════ STATS BAR ══════════════ -->
+  <div class="stats-bar">
+    <div class="wrap">
+      <div class="stats-row">
+        <div class="sr" data-d="1"><div class="stn">2,500+</div><div class="stl">Moves Completed</div></div>
+        <div class="sr" data-d="2"><div class="stn">4.9★</div><div class="stl">Google Rating</div></div>
+        <div class="sr" data-d="3"><div class="stn">10+</div><div class="stl">Years in Business</div></div>
+        <div class="sr" data-d="4"><div class="stn">100%</div><div class="stl">Insured &amp; Certified</div></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════ REVIEWS ══════════════ -->
+  <section id="reviews">
+    <div class="wrap">
+      <div class="rev-header">
+        <div>
+          <div class="eyebrow sr">Customer Reviews</div>
+          <h2 class="sec-h2 sr" data-d="1">What Clients Say<br />About Us</h2>
+        </div>
+        <a href="#" class="btn btn-outline sr" data-d="2">See All Reviews ↗</a>
+      </div>
+
+      <div class="rev-grid">
+        <div class="rev-card sr" data-d="1">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-txt">"Absolutely fantastic from start to finish. Punctual, careful with our furniture, and done ahead of schedule. Best moving experience I've ever had."</p>
+          <div class="rev-auth">
+            <div class="rev-av">JM</div>
+            <div><div class="rev-name">James M.</div><div class="rev-loc">Local Move · 3 weeks ago</div></div>
+          </div>
+        </div>
+        <div class="rev-card sr" data-d="2">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-txt">"Used EC Movers. for our office relocation. They minimized downtime and had us operational by end of day. Genuinely professional operation."</p>
+          <div class="rev-auth">
+            <div class="rev-av">SR</div>
+            <div><div class="rev-name">Sarah R.</div><div class="rev-loc">Commercial Move · 1 month ago</div></div>
+          </div>
+        </div>
+        <div class="rev-card sr" data-d="3">
+          <div class="rev-stars">★★★★★</div>
+          <p class="rev-txt">"Long distance move to Calgary — not a single scratch. They wrapped everything meticulously and sent updates the whole journey. Will never use anyone else."</p>
+          <div class="rev-auth">
+            <div class="rev-av">DK</div>
+            <div><div class="rev-name">David K.</div><div class="rev-loc">Long Distance · 2 months ago</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════ LOCATIONS ══════════════ -->
+  <section id="locations">
+    <div class="wrap">
+      <div class="loc-top">
+        <div class="sr sr-l">
+          <div class="eyebrow">Where We Serve</div>
+          <h2 class="sec-h2">Moving Across<br />the Region.</h2>
+        </div>
+        <div class="sr sr-r">
+          <p class="loc-sub">We proudly serve Windsor-Essex and beyond — local and long-distance across Ontario, Canada, and the US.</p>
+        </div>
+      </div>
+      <div class="chips sr">
+        <div class="chip">Windsor</div>
+        <div class="chip">LaSalle</div>
+        <div class="chip">Tecumseh</div>
+        <div class="chip">Amherstburg</div>
+        <div class="chip">Kingsville</div>
+        <div class="chip">Leamington</div>
+        <div class="chip">Lakeshore</div>
+        <div class="chip">Essex</div>
+        <div class="chip">London</div>
+        <div class="chip">Chatham</div>
+        <div class="chip">Sarnia</div>
+        <div class="chip">Toronto</div>
+        <div class="chip">Ottawa</div>
+        <div class="chip">Montreal</div>
+        <div class="chip">Calgary</div>
+        <div class="chip">Vancouver</div>
+        <div class="chip">Chicago</div>
+        <div class="chip">New York</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════ QUOTE FORM ══════════════ -->
+  <section id="quote">
+    <div class="wrap">
+      <div class="q-layout">
+
+        <!-- Left info -->
+        <div class="sr sr-l">
+          <div class="eyebrow">Free Estimate</div>
+          <h2 class="sec-h2">Get Your<br />Free Quote</h2>
+          <p class="q-sub">Flat-rate pricing, no hidden fees. Hear back within hours.</p>
+
+          <h3>Why Choose Us?</h3>
+          <div class="q-perks">
+            <div class="q-perk"><div class="q-ico">✓</div>Zero hidden fees, flat-rate quotes</div>
+            <div class="q-perk"><div class="q-ico">✓</div>Fully licensed, bonded &amp; insured</div>
+            <div class="q-perk"><div class="q-ico">✓</div>Free packing materials consultation</div>
+            <div class="q-perk"><div class="q-ico">✓</div>Flexible scheduling including weekends</div>
+            <div class="q-perk"><div class="q-ico">✓</div>24/7 emergency moving available</div>
+          </div>
+
+          <div class="ct-block">
+            <h4>Prefer to talk?</h4>
+            <div class="ct-item">📞 <div><strong>(226) 999-9999</strong> Available 24/7</div></div>
+            <div class="ct-item">✉️ <div><strong>hello@EC Movers..ca</strong> Reply within hours</div></div>
+            <div class="ct-item">📍 <div><strong>Windsor, ON</strong> Serving all of Ontario</div></div>
+          </div>
+        </div>
+
+        <!-- Right form -->
+        <div class="sr sr-r" data-d="2">
+          <div class="form-box">
+            <form id="qForm" novalidate>
+              <div class="fg-g">
+                <div class="fg">
+                  <label for="fname">First Name *</label>
+                  <input type="text" id="fname" name="firstName" placeholder="John" required />
+                </div>
+                <div class="fg">
+                  <label for="lname">Last Name *</label>
+                  <input type="text" id="lname" name="lastName" placeholder="Smith" required />
+                </div>
+                <div class="fg">
+                  <label for="phone">Phone *</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(226) 555-0100" required />
+                </div>
+                <div class="fg">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                </div>
+                <div class="fg">
+                  <label for="from">Moving From *</label>
+                  <input type="text" id="from" name="moveFrom" placeholder="Current city / address" required />
+                </div>
+                <div class="fg">
+                  <label for="to">Moving To *</label>
+                  <input type="text" id="to" name="moveTo" placeholder="Destination city / address" required />
+                </div>
+                <div class="fg">
+                  <label for="date">Preferred Date</label>
+                  <input type="date" id="date" name="moveDate" />
+                </div>
+                <div class="fg">
+                  <label for="service">Service Type *</label>
+                  <select id="service" name="serviceType" required>
+                    <option value="" disabled selected>Select service</option>
+                    <option value="residential">Residential Moving</option>
+                    <option value="commercial">Commercial Moving</option>
+                    <option value="long-distance">Long Distance Moving</option>
+                    <option value="piano">Piano / Specialty Moving</option>
+                    <option value="senior">Senior Moving</option>
+                    <option value="packing">Packing &amp; Storage</option>
+                  </select>
+                </div>
+                <div class="fg fg-full">
+                  <label for="notes">Notes</label>
+                  <textarea id="notes" name="notes" placeholder="Special items, access details, questions..."></textarea>
+                </div>
+              </div>
+              <div class="form-btn">
+                <button type="submit" class="btn btn-red">🚛 Request My Free Quote →</button>
+              </div>
+              <div id="fMsg" role="alert"></div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════ CTA BANNER ══════════════ -->
+  <div class="cta-full">
+    <div class="wrap sr">
+      <h2>Ready to Make Your Move?</h2>
+      <p>Let our team handle the heavy lifting — literally.</p>
+      <div class="cta-btns">
+        <a href="#quote" class="btn btn-outline-w btn-lg">📋 Get Free Quote</a>
+        <a href="tel:+12269999999" class="btn btn-lg" style="background:#fff;color:var(--accent);border-color:#fff">📞 Call Us Now</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer>
+    <div class="wrap">
+      <div class="ft-top">
+        <div>
+          <a href="#" class="logo" style="color:#fff">
+            <div class="logo-mark">🚛</div>EC Movers.
+          </a>
+          <p class="ft-desc">Professional moving services built on transparency, care, and reliability. Your next chapter starts here.</p>
+        </div>
+        <div class="ft-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#services">Residential Moving</a></li>
+            <li><a href="#services">Commercial Moving</a></li>
+            <li><a href="#services">Long Distance</a></li>
+            <li><a href="#services">Piano Moving</a></li>
+            <li><a href="#services">Senior Moving</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#why">About Us</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#locations">Locations</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h5>Contact</h5>
+          <div class="ft-ci">📞 <div><strong>(226) 999-9999</strong>Available 24/7</div></div>
+          <div class="ft-ci">✉️ <div><strong>hello@EC Movers..ca</strong>Reply in hours</div></div>
+          <div class="ft-ci">📍 <div><strong>Windsor, ON</strong>Serving all Ontario</div></div>
+        </div>
+      </div>
+      <div class="ft-bot">
+        <span>© 2025 EC Movers. Movers. All rights reserved.</span>
+        <div class="ft-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button id="stb" aria-label="Scroll to top">↑</button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
