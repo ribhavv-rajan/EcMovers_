@@ -1,5 +1,5 @@
 /**
- * SwiftShift Movers — main.js
+ * EC Movers Ltd — main.js
  * Handles: navbar scroll, mobile drawer, scroll reveal,
  *          hero counter animations, quote form submission.
  */
@@ -7,7 +7,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ─────────────────────────────────────────────
-     1. NAVBAR — sticky + logo color swap
+     1. NAVBAR — sticky + logo swap
   ───────────────────────────────────────────── */
   const nav = document.getElementById('nav');
   const stb = document.getElementById('stb');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ─────────────────────────────────────────────
      2. MOBILE DRAWER
   ───────────────────────────────────────────── */
-  const hamBtn  = document.getElementById('hamBtn');
+  const hamBtn = document.getElementById('hamBtn');
   const mDrawer = document.getElementById('mDrawer');
 
   function closeDrawer() {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mDrawer.classList.remove('o');
     document.body.style.overflow = '';
   }
-  window.closeDrawer = closeDrawer; // expose for inline onclick
+  window.closeDrawer = closeDrawer;
 
   hamBtn.addEventListener('click', () => {
     const open = mDrawer.classList.toggle('o');
@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = open ? 'hidden' : '';
   });
 
-  // Close drawer on ESC
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeDrawer();
   });
@@ -60,30 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.sr, .sr-l, .sr-r').forEach(el => {
-    revealObs.observe(el);
-  });
+  document.querySelectorAll('.sr, .sr-l, .sr-r').forEach(el => revealObs.observe(el));
 
 
   /* ─────────────────────────────────────────────
      4. HERO STAT COUNTERS
   ───────────────────────────────────────────── */
-  /**
-   * Animates a number from 0 to `target` over `duration` ms.
-   * @param {HTMLElement} el      - element to update
-   * @param {number}      target  - final value
-   * @param {boolean}     decimal - true → one decimal place
-   */
   function countUp(el, target, decimal = false) {
     const duration = 2000;
-    const steps    = 60;
-    let   i        = 0;
+    const steps = 60;
+    let i = 0;
 
     const timer = setInterval(() => {
       i++;
-      // Ease-out cubic
       const progress = 1 - Math.pow(1 - i / steps, 3);
-      const value    = target * progress;
+      const value = target * progress;
 
       el.textContent = decimal
         ? value.toFixed(1)
@@ -96,14 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, duration / steps);
   }
 
-  // Trigger counters when hero enters viewport
   const heroSection = document.getElementById('hero');
-  const counterObs  = new IntersectionObserver(([entry]) => {
+  const counterObs = new IntersectionObserver(([entry]) => {
     if (entry.isIntersecting) {
-      countUp(document.getElementById('s1'), 4.9,  true);
-      countUp(document.getElementById('s2'), 2500, false);
-      countUp(document.getElementById('s3'), 10,   false);
-      countUp(document.getElementById('s4'), 1500, false);
+      countUp(document.getElementById('s1'), 4.9, true);
+      countUp(document.getElementById('s2'), 1000, false);
+      countUp(document.getElementById('s3'), 10, false);
+      countUp(document.getElementById('s4'), 800, false);
       counterObs.disconnect();
     }
   }, { threshold: 0.3 });
@@ -112,27 +101,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ─────────────────────────────────────────────
-     5. QUOTE FORM SUBMISSION (front-end demo)
-        Replace with real fetch() POST to your backend.
+     5. QUOTE FORM SUBMISSION
+        Replace the TODO block with real fetch() call.
   ───────────────────────────────────────────── */
   const qForm = document.getElementById('qForm');
-  const fMsg  = document.getElementById('fMsg');
+  const fMsg = document.getElementById('fMsg');
 
   if (qForm) {
     qForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       const submitBtn = qForm.querySelector('button[type="submit"]');
-      const original  = submitBtn.textContent;
+      const origText = submitBtn.textContent;
       submitBtn.textContent = 'Sending…';
-      submitBtn.disabled    = true;
+      submitBtn.disabled = true;
 
-      // ── Collect form data
       const data = Object.fromEntries(new FormData(qForm));
 
       try {
         /*
-         * TODO: Replace this block with a real API call, e.g.:
+         * TODO: Replace with real API call:
          *
          * const res = await fetch('/api/quote', {
          *   method: 'POST',
@@ -142,31 +130,51 @@ document.addEventListener('DOMContentLoaded', () => {
          * if (!res.ok) throw new Error('Server error');
          */
 
-        // Simulate network delay for demo
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 1000)); // demo delay
 
-        // Success state
         fMsg.style.display = 'block';
-        fMsg.style.color   = '#1A7A3A';
-        fMsg.textContent   = '✅ Quote request received! We\'ll be in touch within a few hours.';
+        fMsg.style.color = '#1A7A3A';
+        fMsg.textContent = '✅ Quote request received! We\'ll be in touch within a few hours.';
         qForm.reset();
-
         setTimeout(() => { fMsg.style.display = 'none'; }, 7000);
 
       } catch (err) {
         fMsg.style.display = 'block';
-        fMsg.style.color   = '#C0392B';
-        fMsg.textContent   = '❌ Something went wrong. Please call us directly or try again.';
+        fMsg.style.color = '#C0392B';
+        fMsg.textContent = '❌ Something went wrong. Please call us directly or try again.';
       } finally {
-        submitBtn.textContent = original;
-        submitBtn.disabled    = false;
+        submitBtn.textContent = origText;
+        submitBtn.disabled = false;
       }
     });
   }
 
 
   /* ─────────────────────────────────────────────
-     6. SMOOTH ANCHOR SCROLL (for mobile nav links)
+     6. FAQ ACCORDION
+  ───────────────────────────────────────────── */
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-q.open').forEach(b => {
+        b.classList.remove('open');
+        b.nextElementSibling.classList.remove('open');
+      });
+
+      // Open clicked (if wasn't open)
+      if (!isOpen) {
+        btn.classList.add('open');
+        answer.classList.add('open');
+      }
+    });
+  });
+
+
+  /* ─────────────────────────────────────────────
+     7. SMOOTH ANCHOR SCROLL
   ───────────────────────────────────────────── */
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
@@ -175,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       closeDrawer();
       const offset = nav ? nav.offsetHeight : 0;
-      const top    = target.getBoundingClientRect().top + window.scrollY - offset;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
