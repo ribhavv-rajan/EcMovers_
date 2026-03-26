@@ -4,65 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="EC Movers Ltd — Professional moving services. Residential, commercial, and long-distance moves done right. Fully insured, flat-rate pricing, 5-star rated." />
+  <link rel="icon" type="image/png" href="assets/logo.png">
   <title>EC Movers Ltd — Professional Moving Services</title>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MovingCompany",
+    "name": "EC Movers Ltd",
+    "url": "https://ecmovers.ca",
+    "logo": "https://ecmovers.ca/assets/logo.png",
+    "telephone": "+12269999999",
+    "email": "hello@ecmovers.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1000 North Talbot Road",
+      "addressLocality": "Windsor",
+      "addressRegion": "ON",
+      "postalCode": "N9G 2S3",
+      "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 42.3149,
+      "longitude": -83.0364
+    },
+    "openingHours": "Mo-Sa 07:00-20:00",
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "1500"
+    },
+    "sameAs": [
+      "https://www.facebook.com/ecmovers",
+      "https://www.instagram.com/ecmovers"
+    ]
+  }
+  </script>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://ecmovers.ca/index.html" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png"  href="assets/logo.png" />
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════════════
-       NAVBAR
-  ══════════════════════════════════════════════ -->
-  <header id="nav">
-    <div class="wrap nav-inner">
-             <!-- <a href="#" class="logo">
-               <img src="assets/logo.jpg.jpeg" alt="EC Movers Ltd" class="logo-img" />
-               <div class="logo-text">
-                 <span class="main">EC Movers</span>
-                 <span class="sub">Ltd</span>
-               </div>
-             </a> -->
-
-             <a href="#" class="logo">
-               <img src="assets/logo.jpg.jpeg" alt="EC Movers Ltd" style="height:52px;width:auto;border-radius:50%" />
-             </a>
-
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#why">Why Us</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#faq">FAQ</a>
-        <a href="#locations">Locations</a>
-      </nav>
-
-      <div class="nav-right">
-        <a href="#quote" class="btn btn-primary">Get Free Quote</a>
-        <button class="ham" id="hamBtn" aria-label="Open navigation">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Drawer -->
-  <div class="m-drawer" id="mDrawer" role="dialog" aria-label="Navigation">
-    <a href="#services"  onclick="closeDrawer()">Services</a>
-    <a href="#why"       onclick="closeDrawer()">Why Us</a>
-    <a href="#gallery"   onclick="closeDrawer()">Gallery</a>
-    <a href="#faq"       onclick="closeDrawer()">FAQ</a>
-    <a href="#locations" onclick="closeDrawer()">Locations</a>
-    <a href="tel:+12269999999" onclick="closeDrawer()">📞 Call Now</a>
-    <a href="#quote" class="btn btn-white m-cta" onclick="closeDrawer()">Get Free Quote →</a>
-  </div>
+  <!-- Shared navbar + drawer injected by js/components.js -->
+  <div id="site-nav"></div>
 
 
-  <!-- ══════════════════════════════════════════════
+  <!-- ════════════════════════════════════════════
        HERO
   ══════════════════════════════════════════════ -->
   <section id="hero">
@@ -95,7 +95,7 @@
           </p>
 
           <div class="hero-btns">
-            <a href="#quote" class="btn btn-white btn-lg">📋 Get a Free Quote</a>
+            <a href="contact.html" class="btn btn-white btn-lg">📋 Get a Free Quote</a>
             <a href="tel:+15195668933" class="btn btn-outline-w btn-lg">📞 (519) 566-8933</a>
           </div>
 
@@ -123,9 +123,9 @@
         <div class="hero-cards">
           <div class="glass-card">
             <div class="gc-label">Customer Satisfaction</div>
-            <div class="gc-rating-num">4.9</div>
+            <div class="gc-rating-num">5.0</div>
             <div class="gc-stars">★★★★★</div>
-            <div class="gc-count">Based on 1,500+ reviews</div>
+            <div class="gc-count">Based on 2,000+ reviews</div>
             <div class="gc-divider"></div>
             <div class="gc-quote">"The most professional movers I've ever hired. On time, careful, and genuinely kind."</div>
             <div class="gc-author">— Sarah K., Local Move</div>
@@ -182,40 +182,42 @@
           <div class="eyebrow">What We Do</div>
           <h2 class="sec-h2">Every Move,<br />Done Right.</h2>
           <p class="sec-sub">From single-room apartments to full corporate relocations, we bring the same professionalism to every job.</p>
-          <a href="#quote" class="sec-link">Get a Quote ↗</a>
+          <a href="contact.html" class="sec-link">Get a Quote ↗</a>
         </div>
 
         <div class="svc-list">
-          <div class="svc sr" data-d="1">
+
+          <a href="services.html#residential"><div class="svc sr" data-d="1">
             <div class="svc-n">01</div>
             <div class="svc-info"><h3>Residential Moving</h3><p>Apartments, condos, and homes. We pack, load, transport, and set up with care.</p></div>
             <div class="svc-right"><div class="svc-ico">🏠</div><span class="svc-arr">→</span></div>
-          </div>
-          <div class="svc sr" data-d="2">
+          </div></a>
+
+          <a href="services.html#commercial"><div class="svc sr" data-d="2">
             <div class="svc-n">02</div>
             <div class="svc-info"><h3>Commercial Moving</h3><p>Office relocations with minimal downtime. We reassemble your workspace efficiently.</p></div>
             <div class="svc-right"><div class="svc-ico">🏢</div><span class="svc-arr">→</span></div>
-          </div>
-          <div class="svc sr" data-d="3">
+          </div></a>
+          <a href="services.html#long-distance"><div class="svc sr" data-d="3">
             <div class="svc-n">03</div>
             <div class="svc-info"><h3>Long Distance Moving</h3><p>Across provinces or the country — one truck, one driver, zero transfers.</p></div>
             <div class="svc-right"><div class="svc-ico">🛣️</div><span class="svc-arr">→</span></div>
-          </div>
-          <div class="svc sr" data-d="4">
+          </div></a>
+          <a href="services.html#piano"><div class="svc sr" data-d="4">
             <div class="svc-n">04</div>
             <div class="svc-info"><h3>Piano &amp; Specialty Moving</h3><p>Grand pianos, pool tables, hot tubs — specialist gear for heavy and delicate items.</p></div>
             <div class="svc-right"><div class="svc-ico">🎹</div><span class="svc-arr">→</span></div>
-          </div>
-          <div class="svc sr" data-d="5">
+          </div></a>
+          <a href="services.html#senior"><div class="svc sr" data-d="5">
             <div class="svc-n">05</div>
             <div class="svc-info"><h3>Senior Moving</h3><p>Patient, compassionate service for seniors with full family coordination.</p></div>
             <div class="svc-right"><div class="svc-ico">💛</div><span class="svc-arr">→</span></div>
-          </div>
-          <div class="svc sr" data-d="5">
+          </div></a>
+          <a href="services.html#packing"><div class="svc sr" data-d="6">
             <div class="svc-n">06</div>
             <div class="svc-info"><h3>Packing &amp; Storage</h3><p>Full or partial packing with quality materials. Secure short and long-term storage.</p></div>
             <div class="svc-right"><div class="svc-ico">📦</div><span class="svc-arr">→</span></div>
-          </div>
+          </div></a>
         </div>
 
       </div>
@@ -272,13 +274,157 @@
   <div class="stats-bar">
     <div class="wrap">
       <div class="stats-row">
-        <div class="sr" data-d="1"><div class="stn">1,500+</div><div class="stl">Moves Completed</div></div>
-        <div class="sr" data-d="2"><div class="stn">4.9★</div><div class="stl">Google Rating</div></div>
+        <div class="sr" data-d="1"><div class="stn">4,000+</div><div class="stl">Moves Completed</div></div>
+        <div class="sr" data-d="2"><div class="stn">5.0★</div><div class="stl">Google Rating</div></div>
         <div class="sr" data-d="3"><div class="stn">10+</div><div class="stl">Years in Business</div></div>
         <div class="sr" data-d="4"><div class="stn">100%</div><div class="stl">Insured &amp; Certified</div></div>
       </div>
     </div>
   </div>
+
+
+
+  <!-- ══════════════════════════════════════════════
+       AWARDS
+  ══════════════════════════════════════════════ -->
+  <!-- ══════════════════════════════════════════════
+       AWARDS
+       ─────────────────────────────────────────────
+       TO ADD A REAL AWARD PHOTO:
+         Replace the <div class="award-icon"> block inside
+         any .award-badge with:
+           <img src="assets/awards/award-name.png"
+                alt="Award name"
+                class="award-img" />
+         Put your award image in: assets/awards/
+
+       TO ADD A NEW AWARD: copy one .award-badge block
+         and update year, title, org, and icon/image.
+
+       Award images recommended size: 120×120 px, PNG with
+       transparent background for cleanest look.
+  ══════════════════════════════════════════════ -->
+  <section id="awards">
+    <div class="wrap">
+      <div class="awards-inner">
+        <div class="sr">
+          <div class="eyebrow">Recognition</div>
+          <h2 class="sec-h2">Locally Recognised by<br/>Award-Winning Excellence</h2>
+          <p>Proud recipients of community and industry awards that reflect our commitment to quality service.</p>
+        </div>
+        <div class="awards-row sr" data-d="1">
+
+          <!-- AWARD 1 ── Replace award-icon with <img class="award-img" src="assets/awards/award-2025.png" alt="Best Mover 2025"> -->
+          <div class="award-badge">
+            <img class="award-img" src="assets/awards/1.jpeg" alt="Award Badge">
+            <!-- ↑ swap the line above with your award image once you have it -->
+            <div class="award-year">2026</div>
+            <div class="award-title">Best Business Awards<br/>Windsor-Essex</div>
+            <div class="award-org">Local Choice Awards</div>
+          </div>
+
+          <!-- AWARD 2 -->
+          <div class="award-badge">
+            <img class="award-img" src="assets/awards/3.jpeg" alt="Award Badge">
+            <div class="award-year">2026</div>
+            <div class="award-title">Top Choice Award<br/>Windsor-Essex</div>
+            <div class="award-org">Local Choice Awards</div>
+          </div>
+          <!-- AWARD 3 ── Replace award-icon with <img class="award-img" src="assets/awards/homestars-2024.png" alt="HomeStars Top Rated 2024"> -->
+          <div class="award-badge">
+            <img class="award-img" src="assets/awards/2.jpeg" alt="Award Badge">
+            <div class="award-year">2025</div>
+            <div class="award-title">Consumer Choice Award<br/>Moving Co.</div>
+            <div class="award-org">Local Choice Awards</div>
+          </div>
+
+          
+
+          
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       FLEET & PRICING
+  ══════════════════════════════════════════════ -->
+  <section id="fleet">
+    <div class="wrap">
+      <div class="fleet-header sr">
+        <div class="eyebrow">Our Fleet</div>
+        <h2 class="sec-h2">Trucks &amp; Transparent Pricing</h2>
+        <p>Every truck is fully equipped with protection gear. Choose the right fit for your move — no surprises on the invoice.</p>
+      </div>
+      <div class="fleet-grid">
+        <div class="fleet-card sr" data-d="1">
+          <div class="fleet-thumb">
+            🚐
+            <div class="fleet-thumb-badge">Small Moves</div>
+          </div>
+          <div class="fleet-body">
+            <h3>16′ Truck + 2 Movers</h3>
+            <p>Perfect for studio apartments, single rooms, or small condo moves. Efficient, fast, and easy on the budget.</p>
+            <div class="fleet-features">
+              <div class="fleet-feat">2 professional movers</div>
+              <div class="fleet-feat">Moving blankets &amp; shrink wrap</div>
+              <div class="fleet-feat">Furniture dollies included</div>
+              <div class="fleet-feat">Door &amp; floor protection</div>
+            </div>
+            <div class="fleet-price">
+              <span class="from">From</span>
+              <span class="amt">$120</span>
+              <span class="per">/ hr</span>
+            </div>
+          </div>
+        </div>
+        <div class="fleet-card sr" data-d="2">
+          <div class="fleet-thumb">
+            🚛
+            <div class="fleet-thumb-badge">Most Popular</div>
+          </div>
+          <div class="fleet-body">
+            <h3>26′ Truck + 2 Movers</h3>
+            <p>Our most popular option — ideal for 1–3 bedroom homes. Handles all standard household furniture with room to spare.</p>
+            <div class="fleet-features">
+              <div class="fleet-feat">2 professional movers</div>
+              <div class="fleet-feat">Full protection gear kit</div>
+              <div class="fleet-feat">Runners &amp; door jam protectors</div>
+              <div class="fleet-feat">Wardrobe boxes available</div>
+            </div>
+            <div class="fleet-price">
+              <span class="from">From</span>
+              <span class="amt">$150</span>
+              <span class="per">/ hr</span>
+            </div>
+          </div>
+        </div>
+        <div class="fleet-card sr" data-d="3">
+          <div class="fleet-thumb">
+            🏗️
+            <div class="fleet-thumb-badge">Large Moves</div>
+          </div>
+          <div class="fleet-body">
+            <h3>26′ Truck + 3 Movers</h3>
+            <p>Built for large homes, commercial moves, or anything with heavy specialty items. Three movers means faster turnaround.</p>
+            <div class="fleet-features">
+              <div class="fleet-feat">3 professional movers</div>
+              <div class="fleet-feat">Full protection gear kit</div>
+              <div class="fleet-feat">Piano &amp; specialty equipment</div>
+              <div class="fleet-feat">Stair climbing equipment</div>
+            </div>
+            <div class="fleet-price">
+              <span class="from">From</span>
+              <span class="amt">$190</span>
+              <span class="per">/ hr</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   <!-- ══════════════════════════════════════════════
@@ -291,7 +437,7 @@
           <div class="eyebrow sr">Customer Reviews</div>
           <h2 class="sec-h2 sr" data-d="1">What Clients Say<br />About Us</h2>
         </div>
-        <a href="#" class="btn btn-outline sr" data-d="2">See All Reviews ↗</a>
+        <a href="contact.html#reviews" class="btn btn-outline sr" data-d="2">See All Reviews ↗</a>
       </div>
       <div class="rev-grid">
         <div class="rev-card sr" data-d="1">
@@ -324,12 +470,16 @@
         <div class="sr sr-r"><p class="loc-sub">We proudly serve Windsor-Essex and beyond — local and long-distance across Ontario, Canada, and the US.</p></div>
       </div>
       <div class="chips sr">
-        <div class="chip">Windsor</div><div class="chip">LaSalle</div><div class="chip">Tecumseh</div>
-        <div class="chip">Amherstburg</div><div class="chip">Kingsville</div><div class="chip">Leamington</div>
-        <div class="chip">Lakeshore</div><div class="chip">Essex</div><div class="chip">London</div>
-        <div class="chip">Chatham</div><div class="chip">Sarnia</div><div class="chip">Toronto</div>
-        <div class="chip">Ottawa</div><div class="chip">Montreal</div><div class="chip">Calgary</div>
-        <div class="chip">Vancouver</div><div class="chip">Chicago</div><div class="chip">New York</div>
+        <div class="chip" onclick="location.href='locations/essex.html'" style="cursor:pointer">Essex</div>
+        <div class="chip" onclick="location.href='locations/windsor.html'" style="cursor:pointer">Windsor</div>
+        <div class="chip" onclick="location.href='locations/chatham.html'">Chatham</div>
+        <div class="chip" onclick="location.href='locations/amherstburg.html'" style="cursor:pointer">Amherstburg</div>
+        <div class="chip" onclick="location.href='locations/london.html'" style="cursor:pointer">London</div>
+        <div class="chip" onclick="location.href='locations/leamington.html'" style="cursor:pointer">Leamington</div>
+        <div class="chip" onclick="location.href='locations/kingsville.html'" style="cursor:pointer">Kingsville</div>
+        <div class="chip" onclick="location.href='locations/lasalle.html'" style="cursor:pointer">LaSalle</div>
+        <div class="chip" onclick="location.href='locations/tecumseh.html'" style="cursor:pointer">Tecumseh</div>
+        <div class="chip" onclick="location.href='locations/sarnia.html'" style="cursor:pointer">Sarnia</div>
       </div>
     </div>
   </section>
@@ -347,13 +497,14 @@
         </div>
         <div class="sr sr-r" style="display:flex;flex-direction:column;align-items:flex-end;gap:.9rem">
           <p style="font-size:.95rem;color:var(--muted);max-width:340px;text-align:right;line-height:1.7">Real moves, real results. Every job handled with the same care and precision.</p>
+          <!-- <div class="g-hint">📸 Replace placeholders with your photos</div> -->
         </div>
       </div>
 
       <div class="gallery-grid sr">
         <!-- Item 1 — wide -->
         <div class="g-item">
-               <img src="assets/gallery/residential_moving.jpeg" alt="Residential moving" />
+          <img src="assets/gallery/residential_moving.jpeg" alt="Residential move" />
           <div class="g-placeholder">
             <div class="g-icon">🏠</div>
             <div class="g-lbl">Residential Move</div>
@@ -363,8 +514,7 @@
 
         <!-- Item 2 -->
         <div class="g-item">
-               <img src="assets/gallery/packing_loading.jpg" alt="Packing and loading" />
-
+          <img src="assets/gallery/packing_loading.jpg" alt="Packing and loading" />
           <div class="g-placeholder">
             <div class="g-icon">📦</div>
             <div class="g-lbl">Packing &amp; Loading</div>
@@ -374,17 +524,17 @@
 
         <!-- Item 3 -->
         <div class="g-item">
-               <img src="assets/gallery/on_the_road.jpg" alt="On the road" />
+          <img src="assets/gallery/on_the_road.jpg" alt="On the road" />
           <div class="g-placeholder">
             <div class="g-icon">🚛</div>
             <div class="g-lbl">On the Road</div>
           </div>
-          <div class="g-overlay"><span class="g-caption">On the Road</span></div>
+          <div class="g-overlay"><span class="g-caption">Long Distance Delivery</span></div>
         </div>
 
         <!-- Item 4 -->
         <div class="g-item">
-               <img src="assets/gallery/poolTable_moving.jpg" alt="Pool table moving" />
+          <img src="assets/gallery/poolTable_moving.jpg" alt="Pool table move" />
           <div class="g-placeholder">
             <div class="g-icon">🏢</div>
             <div class="g-lbl">Pool Table Moving</div>
@@ -394,7 +544,7 @@
 
         <!-- Item 5 — wide -->
         <div class="g-item">
-               <img src="assets/gallery/piano_moving.jpg" alt="Piano moving" />
+          <img src="assets/gallery/piano_moving.jpg" alt="Piano move" />
           <div class="g-placeholder">
             <div class="g-icon">🎹</div>
             <div class="g-lbl">Piano &amp; Specialty</div>
@@ -404,7 +554,7 @@
 
         <!-- Item 6 -->
         <div class="g-item">
-               <img src="assets/gallery/local_moving.jpg" alt="Local moving" />
+          <img src="assets/gallery/local_moving.jpg" alt="Local moving" />
           <div class="g-placeholder">
             <div class="g-icon">✅</div>
             <div class="g-lbl">Local Moving</div>
@@ -591,67 +741,16 @@
       <h2>Ready to Make Your Move?</h2>
       <p>Let EC Movers Ltd handle the heavy lifting — literally.</p>
       <div class="cta-btns">
-        <a href="#quote" class="btn btn-outline-w btn-lg">📋 Get Free Quote</a>
-        <a href="tel:+12269999999" class="btn btn-lg" style="background:#fff;color:var(--blue);border-color:#fff">📞 Call Us Now</a>
+        <a href="contact.html" class="btn btn-outline-w btn-lg">📋 Get Free Quote</a>
+        <a href="tel:+15195668933" class="btn btn-lg" style="background:#fff;color:var(--blue);border-color:#fff">📞 Call Us Now</a>
       </div>
     </div>
   </div>
 
 
-  <!-- ══════════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════════ -->
-  <footer>
-    <div class="wrap">
-      <div class="ft-top">
-        <div class="ft-logo-wrap">
-       <a href="#" class="logo">
-               <img src="assets/logo.png" alt="EC Movers Ltd" class="logo-img" />
-               <div class="logo-text">
-                 <span class="main">EC Movers</span>
-                 <span class="sub">Ltd</span>
-               </div>
-             </a>
-          <p class="ft-desc">Professional moving services built on transparency, care, and reliability. Your next chapter starts here.</p>
-        </div>
-        <div class="ft-col">
-          <h5>Services</h5>
-          <ul>
-            <li><a href="#services">Residential Moving</a></li>
-            <li><a href="#services">Commercial Moving</a></li>
-            <li><a href="#services">Long Distance</a></li>
-            <li><a href="#services">Piano Moving</a></li>
-            <li><a href="#services">Senior Moving</a></li>
-          </ul>
-        </div>
-        <div class="ft-col">
-          <h5>Company</h5>
-          <ul>
-            <li><a href="#why">About Us</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#locations">Locations</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </div>
-        <div class="ft-col">
-          <h5>Contact</h5>
-          <div class="ft-ci">📞 <div><strong>(519) 566-8933</strong>Available 24/7</div></div>
-          <div class="ft-ci">✉️ <div><strong>eastcanadianmovers@gmail.com</strong>Reply in hours</div></div>
-          <div class="ft-ci">📍 <div><strong>4698 Sassafras Ave, Windsor, ON N9G 3E1, Canada</strong>Serving all Ontario</div></div>
-        </div>
-      </div>
-      <div class="ft-bot">
-        <span>© 2026 EC Movers Ltd. All rights reserved.</span>
-        <div class="ft-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <!-- Shared footer injected by components.js -->
+  <div id="site-footer"></div>
 
-  <button id="stb" aria-label="Scroll to top">↑</button>
-
-  <script src="js/main.js"></script>
+  <script src="js/components.js"></script>
 </body>
 </html>

@@ -89,10 +89,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroSection = document.getElementById('hero');
   const counterObs = new IntersectionObserver(([entry]) => {
     if (entry.isIntersecting) {
-      countUp(document.getElementById('s1'), 4.9, true);
-      countUp(document.getElementById('s2'), 1000, false);
+      countUp(document.getElementById('s1'), 5.0, true);
+      countUp(document.getElementById('s2'), 2500, false);
       countUp(document.getElementById('s3'), 10, false);
-      countUp(document.getElementById('s4'), 800, false);
+      countUp(document.getElementById('s4'), 2000, false);
       counterObs.disconnect();
     }
   }, { threshold: 0.3 });

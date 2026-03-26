@@ -3,7 +3,13 @@
    Palette: Cool Blue #2f5bff · Ink #0e1116 · Smoke #f4f6f8
    Fonts:   Syne (headings) · Outfit (body)
 ═══════════════════════════════════════════════════════════════ */
+html {
+  scrollbar-gutter: stable;
+}
 
+body {
+  overflow-y: scroll;
+}
 /* ── TOKENS ──────────────────────────────────────────────────── */
 :root {
   --ink: #0e1116;
@@ -25,7 +31,7 @@
   --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --section-pad: clamp(5rem, 9vw, 7rem);
-  --container: min(1240px, 92vw);
+  --container: min(1240px, 96vw);
 }
 
 /* ── RESET ───────────────────────────────────────────────────── */
@@ -242,10 +248,12 @@ img {
 }
 
 .logo-img {
-  width: 46px;
+  width: auto;
   height: 46px;
+  transform: translateX(5px) scale(1.35);
+  transform-origin: left center;
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: fill;
   background: var(--accent);
   border: 2px solid rgba(255, 255, 255, 0.25);
   transition: border-color 0.3s;
