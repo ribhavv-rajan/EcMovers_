@@ -32,7 +32,7 @@
   /* ─────────────────────────────────────────────────────────
      PATH RESOLVER — detects subdirectory automatically
   ───────────────────────────────────────────────────────── */
-  var inSub = /\/(locations|routes|blog)\//.test(window.location.pathname);
+  var inSub = /\/(locations|routes|blog|features)\//.test(window.location.pathname);
   var base = inSub ? '../' : '';
 
   /* ─────────────────────────────────────────────────────────
@@ -170,6 +170,8 @@
       '</ul>' +
       '</div>' +
 
+
+
       '<div class="ft-col">' +
       '<h5>Company</h5>' +
       '<ul>' +
@@ -190,9 +192,14 @@
       '<div class="ft-ci">&#128205; <div><strong>' + ADDRESS + '</strong>Serving all Ontario</div></div>' +
       '<div style="display:flex;gap:.7rem;margin-top:1.1rem;flex-wrap:wrap">' +
       /* ← TO ADD REAL SOCIAL LINKS: replace href="#" with your actual URLs */
-      '<a href="#" class="ft-social-chip" aria-label="Facebook">&#128248; FB</a>' +
-      '<a href="#" class="ft-social-chip" aria-label="Instagram">&#128247; IG</a>' +
-      '<a href="#" class="ft-social-chip" aria-label="Google Reviews">&#11088; Google</a>' +
+      '<a href="https://www.facebook.com/ecmovers/" class="ft-social-chip" aria-label="Facebook">' +
+      '<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" width="14" style="vertical-align:middle;"> FB</a>' +
+
+      '<a href="https://www.instagram.com/ecmovers_ltd" class="ft-social-chip" aria-label="Instagram">' +
+      '<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="14" style="vertical-align:middle;"> IG</a>' +
+
+      '<a href="#" class="ft-social-chip" aria-label="Google Reviews">' +
+      '<img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" width="14" style="vertical-align:middle;"> Google</a>' +
       '</div>' +
       '</div>' +
 

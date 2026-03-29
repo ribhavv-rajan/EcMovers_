@@ -29,6 +29,14 @@
   <url><loc>https://ecmovers.ca/blog/how-to-pack.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://ecmovers.ca/blog/moving-costs.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
+  <!-- Feature / Why Us pages -->
+  <url><loc>https://ecmoverswindsor.com/features/fully-insured.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmoverswindsor.com/features/flat-rate-pricing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmoverswindsor.com/features/on-time-guarantee.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmoverswindsor.com/features/247-support.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmoverswindsor.com/features/award-winning.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmoverswindsor.com/features/eco-conscious.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
   <!-- Legal pages -->
   <url><loc>https://ecmovers.ca/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://ecmovers.ca/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>

@@ -990,6 +990,34 @@ nav a:hover::after {
   border-color: rgba(47, 91, 255, 0.3);
   transform: translateY(-4px);
 }
+a.perk-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+}
+a.perk-link .perk-ico {
+  transition: transform 0.2s var(--ease);
+}
+a.perk-link:hover .perk-ico {
+  transform: scale(1.15);
+}
+a.perk-link h4::after {
+  content: " →";
+  font-size: 0.8rem;
+  color: var(--accent-l);
+  opacity: 0;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+  display: inline-block;
+  transform: translateX(-4px);
+}
+a.perk-link:hover h4::after {
+  opacity: 1;
+  transform: translateX(0);
+}
 .perk-ico {
   font-size: 1.5rem;
   margin-bottom: 0.8rem;
