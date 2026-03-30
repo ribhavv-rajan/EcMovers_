@@ -66,7 +66,6 @@
       '<a href="' + base + 'services.html#commercial">Commercial Moving</a>' +
       '<a href="' + base + 'services.html#long-distance">Long Distance</a>' +
       '<a href="' + base + 'services.html#piano">Piano &amp; Specialty</a>' +
-      '<a href="' + base + 'services.html#senior">Senior Moving</a>' +
       '<a href="' + base + 'services.html#packing">Packing &amp; Storage</a>';
 
     var locationsDrop =
@@ -76,11 +75,13 @@
       '<a href="' + base + 'locations/amherstburg.html">Amherstburg</a>' +
       '<a href="' + base + 'locations/kingsville.html">Kingsville</a>' +
       '<a href="' + base + 'locations/leamington.html">Leamington</a>' +
-      '<a href="' + base + 'locations/windsor.html">Windsor</a>' +
+      '<a href="' + base + 'locations/tilbury.html">Tilbury</a>' +
       '<a href="' + base + 'locations/sarnia.html">Sarnia</a>' +
       '<a href="' + base + 'locations/london.html">London</a>' +
       '<a href="' + base + 'locations/essex.html">Essex</a>' +
-      '<a href="' + base + 'locations/chatham.html">Chatham</a>';
+      '<a href="' + base + 'locations/chatham.html">Chatham</a>' +
+      '<a href="' + base + 'locations/lakeshore.html">Lakeshore</a>';
+
     el.innerHTML =
       '<header id="nav">' +
       '<div class="wrap nav-inner">' +
@@ -165,7 +166,6 @@
       '<li><a href="' + base + 'services.html#commercial">Commercial Moving</a></li>' +
       '<li><a href="' + base + 'services.html#long-distance">Long Distance</a></li>' +
       '<li><a href="' + base + 'services.html#piano">Piano Moving</a></li>' +
-      '<li><a href="' + base + 'services.html#senior">Senior Moving</a></li>' +
       '<li><a href="' + base + 'services.html#packing">Packing &amp; Storage</a></li>' +
       '</ul>' +
       '</div>' +
@@ -197,6 +197,12 @@
 
       '<a href="https://www.instagram.com/ecmovers_ltd" class="ft-social-chip" aria-label="Instagram">' +
       '<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="14" style="vertical-align:middle;"> IG</a>' +
+
+      '<a href="https://youtube.com/@ecmoversltd" class="ft-social-chip" aria-label="YouTube" target="_blank" rel="noopener">' +
+      '<img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="14" style="vertical-align:middle;"> YT</a>' +
+
+      '<a href="https://www.tiktok.com/@ecmoversltd" class="ft-social-chip" aria-label="TikTok" target="_blank" rel="noopener">' +
+      '<img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" width="14" style="vertical-align:middle;"> TikTok</a>' +
 
       '<a href="#" class="ft-social-chip" aria-label="Google Reviews">' +
       '<img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" width="14" style="vertical-align:middle;"> Google</a>' +
