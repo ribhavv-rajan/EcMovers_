@@ -298,7 +298,6 @@ nav a.nav-active::after {
   border-color: var(--accent);
 }
 .fleet-thumb {
-  width: 100%;
   background: var(--accent-pale);
   height: 180px;
   display: flex;
@@ -398,10 +397,7 @@ nav a.nav-active::after {
   border-radius: 8px;
   border: 2px solid var(--accent);
   cursor: pointer;
-  transition:
-    background 0.22s var(--ease),
-    transform 0.22s var(--ease),
-    box-shadow 0.22s var(--ease);
+  transition: background 0.22s var(--ease), transform 0.22s var(--ease), box-shadow 0.22s var(--ease);
   text-decoration: none;
 }
 .fleet-book-btn:hover {
@@ -415,14 +411,6 @@ nav a.nav-active::after {
   width: 100%;
 }
 
-.fleet-img {
-  width: auto;
-  height: 100%;
-  max-width: 100%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-}
 /* ── COMPARISON TABLE (About page) ──────────────────────────── */
 .compare-wrap {
   overflow-x: auto;

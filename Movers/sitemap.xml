@@ -9,13 +9,17 @@
 
   <!-- Location pages -->
   <url><loc>https://ecmovers.ca/locations/windsor.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://ecmovers.ca/locations/lasalle.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ecmovers.ca/locations/tecumseh.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ecmovers.ca/locations/lasalle.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ecmovers.ca/locations/tecumseh.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://ecmovers.ca/locations/amherstburg.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ecmovers.ca/locations/kingsville.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://ecmovers.ca/locations/leamington.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://ecmovers.ca/locations/toronto.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ecmovers.ca/locations/ottawa.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmovers.ca/locations/kingsville.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ecmovers.ca/locations/leamington.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ecmovers.ca/locations/essex.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmovers.ca/locations/lakeshore.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ecmovers.ca/locations/tilbury.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmovers.ca/locations/chatham.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmovers.ca/locations/sarnia.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmovers.ca/locations/london.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Route pages -->
   <url><loc>https://ecmovers.ca/routes/windsor-to-toronto.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -29,13 +33,13 @@
   <url><loc>https://ecmovers.ca/blog/how-to-pack.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://ecmovers.ca/blog/moving-costs.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
-  <!-- Feature / Why Us pages -->
-  <url><loc>https://ecmoverswindsor.com/features/fully-insured.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://ecmoverswindsor.com/features/flat-rate-pricing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://ecmoverswindsor.com/features/on-time-guarantee.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://ecmoverswindsor.com/features/247-support.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://ecmoverswindsor.com/features/award-winning.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://ecmoverswindsor.com/features/eco-conscious.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <!-- Feature pages -->
+  <url><loc>https://ecmovers.ca/features/fully-insured.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmovers.ca/features/flat-rate-pricing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmovers.ca/features/on-time-guarantee.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmovers.ca/features/247-support.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmovers.ca/features/award-winning.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ecmovers.ca/features/eco-conscious.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- Legal pages -->
   <url><loc>https://ecmovers.ca/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>

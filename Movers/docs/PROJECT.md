@@ -13,16 +13,19 @@
 | **Phase**        | Frontend Complete → Backend Next                            |
 | **Status**       | ✅ Frontend Done · ⏳ Backend Pending                         |
 | **References**   | https://visorguys.com · https://ancientmovers.ca             |
-| **Logo File**    | `assets/logo.png` — circular royal blue badge (provided)    |
+| **Logo File**    | `assets/logo.png` + `assets/logo-v.png` (vertical variant)  |
+| **Phone**        | `(519) 566-8933` → `tel:+15195668933`                        |
+| **Email**        | `eastcanadianmovers@gmail.com`                               |
+| **Address**      | `4698 Sassafras Ave, Windsor, ON N9G 3E1, Canada`            |
 
 ---
 
 ## 🎨 Design System
 
-### Color Palette (derived from EC Movers logo)
+### Color Palette
 | Token         | Hex       | Usage                                  |
 |---------------|-----------|----------------------------------------|
-| `--blue`      | `#1B3FA0` | Primary brand blue (matches logo)      |
+| `--blue`      | `#1B3FA0` | Primary brand blue                     |
 | `--blue-d`    | `#142E7A` | Darker hover state                     |
 | `--blue-l`    | `#2A52C9` | Lighter blue highlights                |
 | `--blue-xl`   | `#3D65E0` | Accent on dark backgrounds             |
@@ -44,237 +47,222 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 ```
 
-### Design Direction
-- **Aesthetic:** Bold, trust-inspiring — deep royal blue base, clean white contrast
-- **Palette logic:** Derived directly from the circular EC Movers logo (royal blue + white)
-- **Section rhythm:** Dark hero → Blue marquee → Light pale blue → Dark → Blue bar → White → Pale → Dark form → Blue CTA → Black footer
-- **Motion:** Scroll-reveal, staggered delays, hero counter animation, floating cards, marquee
-
 ---
 
 ## 🗂️ File Structure
 
 ```
-ecmovers/
-├── index.html            ← Main page (semantic HTML, links CSS/JS)
-├── css/
-│   └── style.css         ← Full styles with CSS custom properties
-├── js/
-│   └── main.js           ← All interactivity
-├── assets/
-│   └── logo.png          ← ⬅ DROP YOUR LOGO FILE HERE
-├── docs/
-│   └── PROJECT.md        ← This file
+Movers/
+├── index.html                    ← Homepage (main SEO page)
+├── about.html
+├── services.html                 ← All services + "What Makes Us Different"
+├── contact.html
+├── privacy.html
+├── terms.html
+├── robots.txt
+├── sitemap.xml                   ← Updated with all 12 location pages
 │
-│   (backend — to be built)
-├── server/
-│   ├── index.js
-│   ├── routes/quote.js
-│   ├── services/mailer.js
-│   └── .env
-└── package.json
+├── css/
+│   ├── style.css                 ← Main styles
+│   ├── pages.css                 ← Inner page styles + nav dropdown
+│   └── seo.css
+│
+├── js/
+│   ├── main.js                   ← Homepage interactivity
+│   └── components.js             ← Shared nav + footer (edit once = updates everywhere)
+│
+├── assets/
+│   ├── logo.png
+│   ├── logo-v.png
+│   ├── gallery/                  ← 6 photos
+│   └── awards/                   ← 3 award images
+│
+├── blog/
+│   ├── index.html
+│   ├── how-to-pack.html
+│   ├── moving-checklist.html
+│   └── moving-costs.html
+│
+├── locations/                    ← 12 location pages
+│   ├── windsor.html              ← PRIMARY (highest SEO priority)
+│   ├── lasalle.html              ← HIGH priority
+│   ├── tecumseh.html             ← HIGH priority
+│   ├── amherstburg.html
+│   ├── leamington.html
+│   ├── kingsville.html
+│   ├── essex.html
+│   ├── lakeshore.html            ← NEW
+│   ├── tilbury.html              ← NEW
+│   ├── chatham.html
+│   ├── sarnia.html
+│   └── london.html
+│
+├── routes/
+│   ├── windsor-to-toronto.html
+│   ├── windsor-to-london.html
+│   ├── windsor-to-ottawa.html
+│   └── windsor-to-calgary.html
+│
+├── features/
+│   ├── fully-insured.html
+│   ├── flat-rate-pricing.html
+│   ├── on-time-guarantee.html
+│   ├── award-winning.html
+│   ├── eco-conscious.html
+│   └── 247-support.html
+│
+└── docs/
+    └── PROJECT.md
 ```
 
 ---
 
-## 🖼️ Logo Integration
+## 🧩 Shared Components (`js/components.js`)
 
-### Current State
-The logo is currently rendered as an **inline SVG** fallback that approximates the circular badge style. It will be replaced with the real image once added to assets.
+Nav and footer injected on every page — edit once, updates everywhere.
 
-### How to Swap to Real Logo (3 steps)
+| Variable         | Value                                          |
+|------------------|------------------------------------------------|
+| `PHONE_DISPLAY`  | `(519) 566-8933`                               |
+| `PHONE_HREF`     | `tel:+15195668933`                             |
+| `EMAIL`          | `eastcanadianmovers@gmail.com`                 |
+| `ADDRESS`        | `4698 Sassafras Ave, Windsor, ON N9G 3E1`      |
 
-**Step 1:** Copy your logo PNG to: `assets/logo.png`
+**Social links in footer:**
+- Facebook: `facebook.com/ecmovers/`
+- Instagram: `instagram.com/ecmovers_ltd`
+- YouTube: `youtube.com/@ecmoversltd`
+- TikTok: `tiktok.com/@ecmoversltd`
 
-**Step 2:** In `index.html`, find the navbar logo section and replace the `<div class="logo-mark">...</div>` block with:
-
-```html
-<!-- OPTION A: Logo image + text name beside it -->
-<a href="#" class="logo">
-  <img src="assets/logo.png" alt="EC Movers Ltd" class="logo-img" />
-  <div class="logo-text">
-    <span class="main">EC Movers</span>
-    <span class="sub">Ltd</span>
-  </div>
-</a>
-
-<!-- OPTION B: Logo only (the logo already contains the name text) -->
-<a href="#" class="logo">
-  <img src="assets/logo.png" alt="EC Movers Ltd" style="height:52px;width:auto;border-radius:50%" />
-</a>
-```
-
-**Step 3:** Do the same in the `<footer>` logo section.
-
-### Logo CSS (already in style.css)
-```css
-.logo-img {
-  width: 46px; height: 46px;
-  border-radius: 50%;
-  object-fit: contain;
-  background: var(--blue);
-  border: 2px solid rgba(255,255,255,.25);
-}
-#nav.stuck .logo-img { border-color: var(--border); }
-```
+**Footer SEO serving text:**
+> Proudly serving Windsor, LaSalle, Tecumseh, Amherstburg, Essex, Lakeshore, Belle River, Kingsville, Leamington, Harrow, Tilbury, Chatham, Sarnia, London, and all surrounding areas across Ontario.
 
 ---
 
-## 🧩 Page Sections
+## 🔑 SEO Keywords Implemented
+
+### Primary (Homepage + Services)
+- Windsor Movers / Movers in Windsor Ontario
+- Moving Company Windsor Ontario / Best Movers Windsor
+- Local Movers Windsor / Windsor Moving Services
+
+### Service + City Combos
+- Piano Movers Windsor
+- Hot Tub Movers Windsor
+- Pool Table Movers Windsor
+- Commercial Movers Windsor
+- Residential Movers Windsor
+- Long Distance Movers Windsor
+
+### Location Pages
+- LaSalle Movers, Tecumseh Movers, Amherstburg Movers
+- Leamington Movers, Kingsville Movers, Essex Movers
+- Lakeshore Movers, Belle River Movers, Tilbury Movers
+- Chatham Movers, Sarnia Movers, London Ontario Movers
+
+---
+
+## 🧱 Homepage Sections
 
 | # | Section        | ID            | Background       | Notes                                         |
 |---|----------------|---------------|------------------|-----------------------------------------------|
 | 1 | Navbar         | `#nav`        | Transparent→White| Fixed, logo/link colours swap on scroll       |
-| 2 | Mobile Drawer  | `#mDrawer`    | `--blue-mid`     | Full-screen slide-in, ESC closes              |
-| 3 | Hero           | `#hero`       | `--blue-mid`     | Animated headline, counters, float cards      |
-| 4 | Marquee Strip  | —             | `--blue`         | Infinite scroll, pauses on hover              |
-| 5 | Services       | `#services`   | `--blue-pale`    | Sticky sidebar + hover-dark list              |
-| 6 | Why Us         | `#why`        | `--blue-mid`     | Process steps + perk grid                    |
-| 7 | Stats Bar      | —             | `--blue`         | 4 bold numbers                               |
-| 8 | Reviews        | `#reviews`    | `--white`        | 3-column cards, yellow stars                  |
-| 9 | Locations      | `#locations`  | `--blue-pale`    | Chip grid, hover fills blue                   |
-| 10| Quote Form     | `#quote`      | `--blue-mid`     | 2-col layout, full form                       |
-| 11| CTA Banner     | —             | `--blue`         | Skewed pseudo-element                         |
-| 12| Footer         | `footer`      | `--ink`          | 4-col, top border is `--blue`                 |
-| 13| Scroll-to-Top  | `#stb`        | —                | Fixed BR, appears after 500px scroll          |
+| 2 | Hero           | `#hero`       | `--blue-mid`     | EC Movers Ltd accent, counters, float cards   |
+| 3 | Marquee        | —             | `--blue`         | Infinite scroll                               |
+| 4 | Services       | `#services`   | `--blue-pale`    | 5 services listed                             |
+| 5 | Why Us         | `#why`        | `--blue-mid`     | Process steps + perks                        |
+| 6 | Stats Bar      | —             | `--blue`         | 4 bold numbers                               |
+| 7 | Awards         | `#awards`     | white            | 3 award badges                               |
+| 8 | Fleet          | `#fleet`      | white            | 3 truck options                              |
+| 9 | Reviews        | `#reviews`    | `--white`        | 3 review cards                               |
+| 10| Locations      | `#locations`  | `--blue-pale`    | 12 city chips                                |
+| 11| Gallery        | `#gallery`    | dark             | 6 photos                                     |
+| 12| FAQ            | `#faq`        | white            | 8 questions                                  |
+| 13| Quote Form     | `#quote`      | `--blue-mid`     | Full form                                    |
+| 14| SEO Block      | `#seo-content`| `--blue-pale`    | Keyword-rich content + 6 trust cards         |
+| 15| CTA Banner     | —             | `--blue`         | Final CTA                                    |
+| 16| Footer         | `footer`      | `--ink`          | 4-col + SEO cities line                      |
 
 ---
 
-## ⚙️ JavaScript (`js/main.js`)
-
-| Feature           | How it works                                                        |
-|-------------------|---------------------------------------------------------------------|
-| Navbar            | `.stuck` added after 80px scroll; colours swap via CSS              |
-| Mobile Drawer     | `.o` toggled on `#hamBtn` + `#mDrawer`; body overflow locked        |
-| Scroll Reveal     | `.sr` / `.sr-l` / `.sr-r` → `.in` via `IntersectionObserver`       |
-| Stagger Delays    | `data-d="1"` through `data-d="5"` → `transition-delay` in CSS      |
-| Counter Animation | Eased count-up on `#s1`–`#s4` triggered when `#hero` enters view   |
-| Quote Form        | Demo mode — replace TODO block with real `fetch('/api/quote', ...)` |
-| Smooth Scroll     | All `a[href^="#"]` links smooth-scroll accounting for nav height    |
+## 🚫 Removed
+- Senior Moving — removed from all pages, nav, footer, forms, location pages, about comparison table
 
 ---
 
 ## 📝 Quote Form Fields
 
-| `name` attr    | Type     | Required | Description                     |
-|----------------|----------|----------|---------------------------------|
-| `firstName`    | text     | ✅        |                                 |
-| `lastName`     | text     | ✅        |                                 |
-| `phone`        | tel      | ✅        |                                 |
-| `email`        | email    | ✅        |                                 |
-| `moveFrom`     | text     | ✅        | City or full address             |
-| `moveTo`       | text     | ✅        | City or full address             |
-| `moveDate`     | date     | ❌        | Optional                        |
-| `serviceType`  | select   | ✅        | residential/commercial/etc.     |
-| `notes`        | textarea | ❌        | Special items, access info       |
+| `name` attr    | Type     | Required |
+|----------------|----------|----------|
+| `firstName`    | text     | ✅        |
+| `lastName`     | text     | ✅        |
+| `phone`        | tel      | ✅        |
+| `email`        | email    | ✅        |
+| `moveFrom`     | text     | ✅        |
+| `moveTo`       | text     | ✅        |
+| `moveDate`     | date     | ❌        |
+| `serviceType`  | select   | ✅        |
+| `notes`        | textarea | ❌        |
 
 ---
 
 ## 🔌 Backend — To Be Built
 
-### Recommended Stack
-- **Node.js + Express** — REST API
-- **Nodemailer** (Gmail SMTP) **or SendGrid** — transactional emails
-- **express-validator** or **zod** — input validation
-- **dotenv** — environment variables
-- **MongoDB Atlas** or **PostgreSQL** — optional, to store quote requests
+### Stack
+- Node.js + Express, Nodemailer / SendGrid, dotenv, express-validator
 
-### API Endpoints Planned
+### Endpoints
+| Method | Route         | Purpose                         |
+|--------|---------------|---------------------------------|
+| POST   | `/api/quote`  | Receive form, send emails       |
+| GET    | `/api/health` | Health check                    |
 
-| Method | Route         | Purpose                                |
-|--------|---------------|----------------------------------------|
-| POST   | `/api/quote`  | Receive form, send admin + user emails |
-| GET    | `/api/health` | Health check                           |
-
-### Request Body for `POST /api/quote`
-```json
-{
-  "firstName":   "John",
-  "lastName":    "Smith",
-  "phone":       "(226) 555-0100",
-  "email":       "john@example.com",
-  "moveFrom":    "Windsor, ON",
-  "moveTo":      "Toronto, ON",
-  "moveDate":    "2025-09-15",
-  "serviceType": "residential",
-  "notes":       "3-bedroom, have a piano"
-}
-```
-
-### `.env` File
+### `.env`
 ```env
 PORT=3000
 EMAIL_HOST=smtp.gmail.com
 EMAIL_PORT=587
-EMAIL_USER=your@gmail.com
+EMAIL_USER=eastcanadianmovers@gmail.com
 EMAIL_PASS=your_app_password
-ADMIN_EMAIL=owner@ecmovers.ca
-SENDGRID_API_KEY=SG.xxxxx
+ADMIN_EMAIL=eastcanadianmovers@gmail.com
 ```
-
----
-
-## 📱 Responsive Breakpoints
-
-| Breakpoint    | Changes                                                |
-|---------------|--------------------------------------------------------|
-| `> 1100px`    | Full 2-column hero with floating glass cards           |
-| `1024–1100px` | Hero cards hidden, hero becomes single column          |
-| `≤ 1024px`    | Hamburger nav, stacked sections, 2-col footer          |
-| `≤ 720px`     | Single-col reviews, form, footer                       |
-| `≤ 480px`     | Smaller hero headline, stacked buttons                 |
 
 ---
 
 ## ✅ Completed
 
-- [x] Color scheme updated to match EC Movers logo (royal blue #1B3FA0)
-- [x] All brand references updated (SwiftShift → EC Movers Ltd)
-- [x] Emails updated to hello@ecmovers.ca
-- [x] Inline SVG logo placeholder (circular badge style)
-- [x] Logo swap instructions documented (3 steps, 2 options)
-- [x] `.logo-img` CSS class ready for real PNG
-- [x] Full responsive website
-- [x] CSS, JS, HTML all separated into clean files
-- [x] This project markdown file
+- [x] Full responsive frontend — all pages
+- [x] EC Movers Ltd prominent in homepage H1
+- [x] SEO content block with full keyword set (Windsor Movers, Piano Movers Windsor, etc.)
+- [x] Footer SEO serving text (all 14 cities)
+- [x] YouTube + TikTok added to footer + contact page
+- [x] Senior Moving removed from ALL pages
+- [x] services.html — "What Makes Us Different" section added
+- [x] services.html — updated hero with service+city keyword badges
+- [x] locations/lakeshore.html — new page
+- [x] locations/tilbury.html — new page
+- [x] locations/windsor.html — HTML glitch fixed
+- [x] sitemap.xml — updated with all 12 location pages, fixed broken URLs
 
 ## ⏳ Pending
 
-- [ ] Drop `assets/logo.png` and swap SVG to `<img>` tag
 - [ ] Backend: Node/Express server
-- [ ] Backend: `POST /api/quote` route
-- [ ] Backend: Email templates (HTML) for admin + customer
-- [ ] Frontend: Connect form to real `/api/quote`
-- [ ] SEO: meta tags, Open Graph, sitemap.xml
-- [ ] Optional: Blog page
-- [ ] Optional: Individual service pages
-- [ ] Optional: Route-specific pages (Windsor to Toronto, etc.)
-- [ ] Optional: Google Reviews API (live review feed)
+- [ ] Backend: `POST /api/quote` + email templates
+- [ ] Frontend: Connect quote form to `/api/quote`
 - [ ] Deployment: Vercel / Railway / VPS
-
----
-
-## 🚀 Quick Start
-
-```bash
-cd ecmovers
-open index.html         # macOS
-start index.html        # Windows
-xdg-open index.html     # Linux
-```
 
 ---
 
 ## 💬 How to Resume with Claude
 
-Paste this entire file at the start of a new conversation, then say:
-- *"Add the real logo image"* → swap SVG to `<img src="assets/logo.png">`
-- *"Build the Node.js backend"* → full Express server + email handler
-- *"Create HTML email templates"* → admin alert + customer confirmation
-- *"Add a blog page"* → matches design system
-- *"Create individual service pages"*
-- *"Set up for Vercel deployment"*
+Paste this entire file at the start of a new conversation, then say what you need:
+
+- *"Build the Node.js backend"*
+- *"Connect the quote form"*
+- *"Set up Vercel deployment"*
+- *"Add a new location page"*
+- *"Add a new blog post"*
 
 ---
 
-*Last updated: 2025 · Project: EC Movers Ltd*
+*Last updated: March 30, 2026 · Project: EC Movers Ltd*

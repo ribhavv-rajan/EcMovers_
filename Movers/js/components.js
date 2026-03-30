@@ -75,13 +75,12 @@
       '<a href="' + base + 'locations/amherstburg.html">Amherstburg</a>' +
       '<a href="' + base + 'locations/kingsville.html">Kingsville</a>' +
       '<a href="' + base + 'locations/leamington.html">Leamington</a>' +
-      '<a href="' + base + 'locations/tilbury.html">Tilbury</a>' +
+      '<a href="' + base + 'locations/lakeshore.html">Lakeshore</a>' +
       '<a href="' + base + 'locations/sarnia.html">Sarnia</a>' +
       '<a href="' + base + 'locations/london.html">London</a>' +
       '<a href="' + base + 'locations/essex.html">Essex</a>' +
-      '<a href="' + base + 'locations/chatham.html">Chatham</a>' +
-      '<a href="' + base + 'locations/lakeshore.html">Lakeshore</a>';
-
+      '<a href="' + base + 'locations/tilbury.html">Tilbury</a>' +
+      '<a href="' + base + 'locations/chatham.html">Chatham</a>';
     el.innerHTML =
       '<header id="nav">' +
       '<div class="wrap nav-inner">' +
@@ -156,7 +155,8 @@
       '<div class="ft-logo-wrap">' +
       logoHTML('color:#fff') +
       /* ← EDIT tagline here */
-      '<p class="ft-desc">Professional moving services built on transparency, care, and reliability. Your next chapter starts here.</p>' +
+      '<p class="ft-desc">Professional moving services built on transparency, care, and reliability. Windsor\'s trusted movers — your next chapter starts here.</p>' +
+      '<p class="ft-desc" style="font-size:.78rem;color:rgba(255,255,255,.4);margin-top:.6rem">Proudly serving Windsor, LaSalle, Tecumseh, Amherstburg, Essex, Lakeshore, Belle River, Kingsville, Leamington, Harrow, Tilbury, Chatham, and surrounding areas.</p>' +
       '</div>' +
 
       '<div class="ft-col">' +
@@ -211,8 +211,10 @@
 
       '</div>' +
 
+
       '<div class="ft-bot">' +
-      '<span>&#169; 2025 EC Movers Ltd. All rights reserved.</span>' +
+      '<div style="width:100%;text-align:center;font-size:.78rem;color:rgba(255,255,255,.35);padding-bottom:.8rem;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:.9rem">Proudly serving Windsor, LaSalle, Tecumseh, Amherstburg, Essex, Lakeshore, Belle River, Kingsville, Leamington, Harrow, Tilbury, Chatham, Sarnia, London, and all surrounding areas across Ontario.</div>' +
+      '<span>&#169; 2026 EC Movers Ltd. All rights reserved.</span>' +
       '<div class="ft-links">' +
       /* ← Create privacy.html + terms.html then update these hrefs */
       '<a href="' + base + 'privacy.html">Privacy Policy</a>' +

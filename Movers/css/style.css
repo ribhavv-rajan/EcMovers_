@@ -559,6 +559,12 @@ nav a:hover::after {
   gap: 1rem;
   animation: fadeUp 0.9s var(--ease) 0.5s both;
 }
+.hero-micro-trust {
+  font-size: .78rem;
+  color: rgba(255,255,255,.55);
+  margin-top: .8rem;
+  letter-spacing: .02em;
+}
 .hero-stats {
   display: flex;
   flex-wrap: wrap;
@@ -1716,6 +1722,18 @@ footer {
 .ft-ci strong {
   color: rgba(255, 255, 255, 0.7);
   display: block;
+}
+.ft-serving {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 1.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,.35);
+  line-height: 1.7;
+}
+.ft-serving strong {
+  color: rgba(255,255,255,.6);
 }
 .ft-bot {
   padding-top: 2rem;
