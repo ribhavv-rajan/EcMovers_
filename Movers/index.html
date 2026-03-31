@@ -85,9 +85,12 @@
           </div>
 
           <h1 class="hero-h1">
-            <span class="accent-line">EC Movers Ltd.</span>
+            <span class="accent-line">
+            EC Movers <span class="ltd">Ltd.</span>
+            </span>
             
-            <span class="white-stroke">Precision. Perfection.</span>
+            <span class="white-stroke hero-tagline-1">Moving Made Simple.</span>
+            <span class="white-stroke hero-tagline-2">Windsor &amp; Essex County Trusted Moving Experts.</span>
           </h1>
 
           <p class="hero-sub">
@@ -98,7 +101,7 @@
           </p>
 
           <div class="hero-btns">
-            <a href="contact.html" class="btn btn-white btn-lg">&#128203; Get a Free Quote</a>
+            <button onclick="openQuoteModal()" class="btn btn-white btn-lg">&#128203; Get a Free Quote</button>
             <a href="tel:+15195668933" class="btn btn-outline-w btn-lg">&#128222; (519) 566-8933</a>
           </div>
 
@@ -156,20 +159,20 @@
   <div class="marquee-strip" aria-hidden="true">
     <div class="marquee-track">
       <div class="m-item">Residential Moving <span class="m-sep">●</span></div>
-      <div class="m-item">Commercial Relocation <span class="m-sep">●</span></div>
+      <div class="m-item">Commercial &amp; Office Moving <span class="m-sep">●</span></div>
       <div class="m-item">Long Distance Moving <span class="m-sep">●</span></div>
-      <div class="m-item">Piano &amp; Specialty <span class="m-sep">●</span></div>
+      <div class="m-item">Piano &amp; Hot Tub Moving <span class="m-sep">●</span></div>
       <div class="m-item">Packing &amp; Storage <span class="m-sep">●</span></div>
+      <div class="m-item">Pool Table Moving <span class="m-sep">●</span></div>
       <div class="m-item">Fully Insured <span class="m-sep">●</span></div>
-      <div class="m-item">Flat-Rate Pricing <span class="m-sep">●</span></div>
       <!-- duplicate for seamless loop -->
       <div class="m-item">Residential Moving <span class="m-sep">●</span></div>
-      <div class="m-item">Commercial Relocation <span class="m-sep">●</span></div>
+      <div class="m-item">Commercial &amp; Office Moving <span class="m-sep">●</span></div>
       <div class="m-item">Long Distance Moving <span class="m-sep">●</span></div>
-      <div class="m-item">Piano &amp; Specialty <span class="m-sep">●</span></div>
+      <div class="m-item">Piano &amp; Hot Tub Moving <span class="m-sep">●</span></div>
       <div class="m-item">Packing &amp; Storage <span class="m-sep">●</span></div>
+      <div class="m-item">Pool Table Moving <span class="m-sep">●</span></div>
       <div class="m-item">Fully Insured <span class="m-sep">●</span></div>
-      <div class="m-item">Flat-Rate Pricing <span class="m-sep">●</span></div>
     </div>
   </div>
 
@@ -184,8 +187,9 @@
         <div class="sec-sticky sr sr-l">
           <div class="eyebrow">What We Do</div>
           <h2 class="sec-h2">Every Move,<br />Done Right.</h2>
-          <p class="sec-sub">From single-room apartments to full corporate relocations, we bring the same professionalism to every job.</p>
-          <a href="contact.html" class="sec-link">Get a Quote ↗</a>
+          <p class="sec-sub">From apartments and family homes to offices, pianos, pool tables, and hot tubs, EC Movers provides professional moving services across Windsor and Essex County with care, efficiency, and reliability
+</p>
+          <button onclick="openQuoteModal()" class="sec-link-btn">Get a Quote ↗</button>
         </div>
 
         <div class="svc-list">
@@ -198,7 +202,7 @@
 
           <a href="services.html#commercial"><div class="svc sr" data-d="2">
             <div class="svc-n">02</div>
-            <div class="svc-info"><h3>Commercial Moving</h3><p>Office relocations with minimal downtime. We reassemble your workspace efficiently.</p></div>
+            <div class="svc-info"><h3>Commercial &amp; Office Moving</h3><p>Office relocations with minimal downtime. We reassemble your workspace efficiently.</p></div>
             <div class="svc-right"><div class="svc-ico">🏢</div><span class="svc-arr">→</span></div>
           </div></a>
           <a href="services.html#long-distance"><div class="svc sr" data-d="3">
@@ -208,13 +212,18 @@
           </div></a>
           <a href="services.html#piano"><div class="svc sr" data-d="4">
             <div class="svc-n">04</div>
-            <div class="svc-info"><h3>Piano &amp; Specialty Moving</h3><p>Grand pianos, pool tables, hot tubs — specialist gear for heavy and delicate items.</p></div>
+            <div class="svc-info"><h3>Piano &amp; Hot Tub Moving</h3><p>Grand pianos, pool tables, hot tubs — specialist gear for heavy and delicate items.</p></div>
             <div class="svc-right"><div class="svc-ico">🎹</div><span class="svc-arr">→</span></div>
           </div></a>
           <a href="services.html#packing"><div class="svc sr" data-d="5">
             <div class="svc-n">05</div>
             <div class="svc-info"><h3>Packing &amp; Storage</h3><p>Full or partial packing with quality materials. Secure short and long-term storage.</p></div>
             <div class="svc-right"><div class="svc-ico">📦</div><span class="svc-arr">→</span></div>
+          </div></a>
+          <a href="services.html#pool-table"><div class="svc sr" data-d="6">
+            <div class="svc-n">06</div>
+            <div class="svc-info"><h3>Pool Table Moving</h3><p>Expert disassembly, transport, and reassembly of pool tables — without a scratch.</p></div>
+            <div class="svc-right"><div class="svc-ico">🎱</div><span class="svc-arr">→</span></div>
           </div></a>
         </div>
 
@@ -359,7 +368,7 @@
       <div class="fleet-grid">
         <div class="fleet-card sr" data-d="1">
           <div class="fleet-thumb">
-            <img src="assets/sticker.png" alt="20 ft moving truck" class="fleet-img" />
+            <img src="assets/truck2.jpeg" alt="20 ft moving truck" class="fleet-img" />
             <div class="fleet-thumb-badge">Small Moves</div>
           </div>
           <div class="fleet-body">
@@ -372,13 +381,13 @@
               <div class="fleet-feat">Door &amp; floor protection</div>
             </div>
             <div class="fleet-price">
-  <a href="contact.html?truck=20-2" class="fleet-book-btn">Book Now</a>
+  <button onclick="openQuoteModal()" class="fleet-book-btn">Book Now</button>
 </div>
           </div>
         </div>
         <div class="fleet-card sr" data-d="2">
           <div class="fleet-thumb">
-            <img src="assets/truck1.jpeg" alt="20 ft moving truck" class="fleet-img" />
+            <img src="assets/truck2.jpeg" alt="20 ft moving truck" class="fleet-img" />
             
             <div class="fleet-thumb-badge">Most Popular</div>
           </div>
@@ -392,7 +401,7 @@
               <div class="fleet-feat">Wardrobe boxes available</div>
             </div>
             <div class="fleet-price">
-  <a href="contact.html?truck=20-2" class="fleet-book-btn">Book Now</a>
+  <button onclick="openQuoteModal()" class="fleet-book-btn">Book Now</button>
 </div>
           </div>
         </div>
@@ -411,7 +420,7 @@
               <div class="fleet-feat">Stair climbing equipment</div>
             </div>
             <div class="fleet-price">
-  <a href="contact.html?truck=26-4" class="fleet-book-btn">Book Now</a>
+  <button onclick="openQuoteModal()" class="fleet-book-btn">Book Now</button>
 </div>
             </div>
           </div>
@@ -431,7 +440,7 @@
           <div class="eyebrow sr">Customer Reviews</div>
           <h2 class="sec-h2 sr" data-d="1">What Clients Say<br />About Us</h2>
         </div>
-        <a href="contact.html#reviews" class="btn btn-outline sr" data-d="2">See All Reviews ↗</a>
+        <button onclick="openReviewsModal()" class="btn btn-outline btn-rounded sr" data-d="2">⭐ See All Reviews</button>
       </div>
       <div class="rev-grid">
         <div class="rev-card sr" data-d="1">
@@ -461,7 +470,7 @@
     <div class="wrap">
       <div class="loc-top">
         <div class="sr sr-l"><div class="eyebrow">Where We Serve</div><h2 class="sec-h2">Moving Across<br />the Region.</h2></div>
-        <div class="sr sr-r"><p class="loc-sub">We proudly serve Windsor-Essex and beyond — local and long-distance across Ontario, Canada, and the US.</p></div>
+        <div class="sr sr-r"><p class="loc-sub">We proudly serve Windsor-Essex and beyond — local and long-distance across Canada.</p></div>
       </div>
       <div class="chips sr">
         <div class="chip" onclick="location.href='locations/essex.html'" style="cursor:pointer">Essex</div>
@@ -493,7 +502,7 @@
         </div>
         <div class="sr sr-r" style="display:flex;flex-direction:column;align-items:flex-end;gap:.9rem">
           <p style="font-size:.95rem;color:var(--muted);max-width:340px;text-align:right;line-height:1.7">Real moves, real results. Every job handled with the same care and precision.</p>
-          <!-- <div class="g-hint">📸 Replace placeholders with your photos</div> -->
+         
         </div>
       </div>
 
@@ -614,7 +623,7 @@
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-a">
-              We offer both hourly and flat-rate pricing depending on the scope of your move. Local moves are typically billed hourly with a minimum of 2 hours, while long-distance and specialty moves are quoted as a flat rate. All quotes are transparent — no hidden fees, no surprises.
+              We offer both hourly and flat-rate pricing depending on the scope of your move. Local moves are typically billed hourly with a minimum of 3 hours, while long-distance and specialty moves are quoted as a flat rate. All quotes are transparent — no hidden fees, no surprises.
             </div>
           </div>
 
@@ -650,11 +659,11 @@
 
           <div class="faq-item">
             <button class="faq-q">
-              Do you move across provinces or to the US?
+              Do you move across Canada?
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-a">
-              Yes. We handle long-distance moves across Canada and into the United States. Our long-distance service uses a single truck and driver — your belongings stay on the same vehicle from pickup to delivery, minimising handling and the risk of damage.
+              Yes. We handle long-distance moves across Canada. Our long-distance service uses a single truck and driver — your belongings stay on the same vehicle from pickup to delivery, minimising handling and the risk of damage.
             </div>
           </div>
 
@@ -675,7 +684,7 @@
           <div class="eyebrow eyebrow-dark">Free Estimate</div>
           <h2 class="sec-h2">Get Your<br />Free Quote</h2>
           <p class="q-sub">Flat-rate pricing, no hidden fees. Hear back within hours.</p>
-          <h3>Why Choose Us?</h3>
+          <h3 style="color: white;">Why Choose Us?</h3>
           <div class="q-perks">
             <div class="q-perk"><div class="q-ico">✓</div>Zero hidden fees, flat-rate quotes</div>
             <div class="q-perk"><div class="q-ico">✓</div>Fully licensed, bonded &amp; insured</div>
@@ -686,7 +695,7 @@
           <div class="ct-block">
             <h4>Prefer to talk?</h4>
             <div class="ct-item">📞 <div><strong>(519) 566-8933</strong> Available 24/7</div></div>
-            <div class="ct-item">✉️ <div><strong>eastcanadianmovers@gmail.com</strong> Reply within hours</div></div>
+            <div class="ct-item">✉️ <div><strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fc999d8f889f9d929d98959d9291938a998e8fbc9b919d9590d29f9391">[email&#160;protected]</a></strong> Reply within hours</div></div>
             <div class="ct-item">📍 <div><strong>4698 Sassafras Ave, Windsor, ON N9G 3E1, Canada</strong> Serving all of Ontario</div></div>
           </div>
         </div>
@@ -793,12 +802,147 @@
       <h2>Ready to Make Your Move?</h2>
       <p>Let EC Movers Ltd handle the heavy lifting — literally.</p>
       <div class="cta-btns">
-        <a href="contact.html" class="btn btn-outline-w btn-lg">📋 Get Free Quote</a>
+        <button onclick="openQuoteModal()" class="btn btn-outline-w btn-lg">📋 Get Free Quote</button>
         <a href="tel:+15195668933" class="btn btn-lg" style="background:#fff;color:var(--blue);border-color:#fff">📞 Call Us Now</a>
       </div>
     </div>
   </div>
 
+
+
+
+  <!-- ══════════════════════════════════════════════
+       QUOTE MODAL
+  ══════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-label="Get a Free Quote">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeQuoteModal()" aria-label="Close">✕</button>
+      <div class="eyebrow eyebrow-dark">Free Estimate</div>
+      <h2 class="sec-h2">Get Your Free Quote</h2>
+      <p class="q-sub">Flat-rate pricing, no hidden fees. Hear back within hours.</p>
+      <div class="form-box">
+        <form id="qFormModal" novalidate>
+          <div class="fg-g">
+            <div class="fg"><label for="mfname">First Name *</label><input type="text" id="mfname" name="firstName" placeholder="John" required /></div>
+            <div class="fg"><label for="mlname">Last Name *</label><input type="text" id="mlname" name="lastName" placeholder="Smith" required /></div>
+            <div class="fg"><label for="mphone">Phone *</label><input type="tel" id="mphone" name="phone" placeholder="(519) 566-8933" required /></div>
+            <div class="fg"><label for="memail">Email *</label><input type="email" id="memail" name="email" placeholder="john@example.com" required /></div>
+            <div class="fg"><label for="mfrom">Moving From *</label><input type="text" id="mfrom" name="moveFrom" placeholder="Current city / address" required /></div>
+            <div class="fg"><label for="mto">Moving To *</label><input type="text" id="mto" name="moveTo" placeholder="Destination city / address" required /></div>
+            <div class="fg"><label for="mdate">Preferred Date</label><input type="date" id="mdate" name="moveDate" /></div>
+            <div class="fg">
+              <label for="mservice">Service Type *</label>
+              <select id="mservice" name="serviceType" required>
+                <option value="" disabled selected>Select service</option>
+                <option value="residential">Residential Moving</option>
+                <option value="commercial">Commercial Moving</option>
+                <option value="long-distance">Long Distance Moving</option>
+                <option value="piano">Piano / Hot Tub Moving</option>
+                <option value="pool-table">Pool Table Moving</option>
+                <option value="packing">Packing &amp; Storage</option>
+              </select>
+            </div>
+            <div class="fg fg-full"><label for="mnotes">Notes</label><textarea id="mnotes" name="notes" placeholder="Special items, access details, questions..."></textarea></div>
+          </div>
+          <div class="form-btn">
+            <button type="submit" class="btn btn-primary">🚛 Request My Free Quote →</button>
+          </div>
+          <div id="mfMsg" role="alert"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       REVIEWS MODAL
+  ══════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="reviewsModal" role="dialog" aria-modal="true" aria-label="All Reviews">
+    <div class="reviews-modal-box">
+      <button class="modal-close" onclick="closeReviewsModal()" aria-label="Close">✕</button>
+      <div class="reviews-modal-header">
+        <div class="eyebrow">Customer Reviews</div>
+        <h2 class="sec-h2" style="color:var(--ink)">What Our Clients Say</h2>
+        <p style="color:var(--muted);font-size:.93rem;margin-top:.5rem">Over 1,000 five-star reviews from Windsor &amp; Essex County clients.</p>
+      </div>
+      <div class="reviews-modal-grid">
+        <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">"Absolutely fantastic from start to finish. Punctual, careful with our furniture, and done ahead of schedule. Best moving experience I've ever had."</p><div class="rev-auth"><div class="rev-av">JM</div><div><div class="rev-name">James M.</div><div class="rev-loc">Local Move · 3 weeks ago</div></div></div></div>
+        <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">"Used EC Movers for our office relocation. They minimized downtime and had us operational by end of day. Genuinely professional operation."</p><div class="rev-auth"><div class="rev-av">SR</div><div><div class="rev-name">Sarah R.</div><div class="rev-loc">Commercial Move · 1 month ago</div></div></div></div>
+        <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">"Long distance move to Calgary — not a single scratch. They wrapped everything meticulously and sent updates the whole journey. Will never use anyone else."</p><div class="rev-auth"><div class="rev-av">DK</div><div><div class="rev-name">David K.</div><div class="rev-loc">Long Distance · 2 months ago</div></div></div></div>
+        <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">"Moved my grand piano without a hitch. The team was knowledgeable, careful, and efficient. Highly recommend for specialty moves."</p><div class="rev-auth"><div class="rev-av">ML</div><div><div class="rev-name">Michelle L.</div><div class="rev-loc">Piano Move · 6 weeks ago</div></div></div></div>
+        <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">"Called last minute and they fit us in the next day. Professional crew, wrapped everything carefully, zero damage. Exactly what you want in a moving company."</p><div class="rev-auth"><div class="rev-av">AT</div><div><div class="rev-name">Andrew T.</div><div class="rev-loc">Local Move · 2 weeks ago</div></div></div></div>
+        <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">"Hot tub removal was flawless. They knew exactly how to disconnect and move it safely. Fair price, friendly crew, zero stress."</p><div class="rev-auth"><div class="rev-av">PW</div><div><div class="rev-name">Patricia W.</div><div class="rev-loc">Hot Tub Move · 5 weeks ago</div></div></div></div>
+        <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">"Third time using EC Movers. Every single time they show up on time, work hard, and handle our stuff with care. Wouldn't go anywhere else."</p><div class="rev-auth"><div class="rev-av">RB</div><div><div class="rev-name">Robert B.</div><div class="rev-loc">Repeat Client · 1 month ago</div></div></div></div>
+        <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">"Pool table moved from our old house to the new one — perfectly level and reassembled in under two hours. Incredible service."</p><div class="rev-auth"><div class="rev-av">CJ</div><div><div class="rev-name">Chris J.</div><div class="rev-loc">Pool Table Move · 3 weeks ago</div></div></div></div>
+        <div class="rev-card"><div class="rev-stars">★★★★★</div><p class="rev-txt">"The packing service was worth every penny. Team showed up early, packed our entire 3-bedroom home in one day, and everything arrived perfectly intact."</p><div class="rev-auth"><div class="rev-av">LN</div><div><div class="rev-name">Lisa N.</div><div class="rev-loc">Full Pack &amp; Move · 7 weeks ago</div></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       MODAL JAVASCRIPT
+  ══════════════════════════════════════════════ -->
+  <script>
+    /* ── Quote Modal ── */
+    function openQuoteModal() {
+      document.getElementById('quoteModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeQuoteModal() {
+      document.getElementById('quoteModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    /* ── Reviews Modal ── */
+    function openReviewsModal() {
+      document.getElementById('reviewsModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeReviewsModal() {
+      document.getElementById('reviewsModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    /* ── Close on overlay click ── */
+    document.addEventListener('click', function(e) {
+      if (e.target.id === 'quoteModal') closeQuoteModal();
+      if (e.target.id === 'reviewsModal') closeReviewsModal();
+    });
+
+    /* ── Close on Escape ── */
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeQuoteModal();
+        closeReviewsModal();
+      }
+    });
+
+    /* ── Modal Quote Form Submission ── */
+    document.addEventListener('DOMContentLoaded', function() {
+      var modalForm = document.getElementById('qFormModal');
+      var mfMsg = document.getElementById('mfMsg');
+      if (modalForm && mfMsg) {
+        modalForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var btn = modalForm.querySelector('button[type="submit"]');
+          var orig = btn.textContent;
+          btn.textContent = 'Sending…';
+          btn.disabled = true;
+          setTimeout(function() {
+            mfMsg.style.display = 'block';
+            mfMsg.style.color = '#1A7A3A';
+            mfMsg.textContent = '✅ Quote request received! We’ll be in touch within a few hours.';
+            modalForm.reset();
+            btn.textContent = orig;
+            btn.disabled = false;
+            setTimeout(function() {
+              mfMsg.style.display = 'none';
+              closeQuoteModal();
+            }, 3500);
+          }, 900);
+        });
+      }
+    });
+  </script>
 
   <!-- Shared footer injected by components.js -->
   <div id="site-footer"></div>

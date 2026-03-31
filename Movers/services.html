@@ -82,7 +82,7 @@
         </div>
         <div class="sd-copy">
           <div class="eyebrow">Service 02</div>
-          <h2 class="sec-h2">Commercial Moving</h2>
+          <h2 class="sec-h2">Commercial &amp; Office Moving</h2>
           <p>Office downtime costs money. Our commercial moving team works efficiently and strategically to get your business up and running in its new location as fast as possible — often within the same day.</p>
           <p>We handle everything: workstations, server equipment (with your IT team), furniture systems, filing, and reception areas. Weekend and after-hours moves available to minimise business disruption.</p>
           <div class="sd-features">
@@ -106,11 +106,11 @@
         <div class="sd-img"><img src="assets/gallery/local_moving.jpg" alt="Long Distance Moving Service" /></div>
         <div class="sd-copy">
           <div class="eyebrow">Service 03</div>
-          <h2 class="sec-h2">Long Distance &amp; Cross-Border Moving</h2>
-          <p>Moving across provinces — or into the US? Our long-distance service keeps your belongings on a single truck with a single driver from origin to destination. No transfers, no relay points, no extra handling.</p>
-          <p>We manage cross-border customs paperwork and coordinate timing to ensure a seamless arrival. Flat-rate pricing means you know the exact cost before we start loading.</p>
+          <h2 class="sec-h2">Long Distance Moving</h2>
+          <p>Moving across provinces — Our long-distance service keeps your belongings on a single truck with a single driver from origin to destination. No transfers, no relay points, no extra handling.</p>
+          <p>We manage paperwork and coordinate timing to ensure a seamless arrival. Flat-rate pricing means you know the exact cost before we start loading.</p>
           <div class="sd-features">
-            <div class="sd-feat">Across Canada &amp; into the US</div>
+            <div class="sd-feat">Across Canada</div>
             <div class="sd-feat">Single truck, no transfers</div>
             <div class="sd-feat">GPS-tracked delivery</div>
             <div class="sd-feat">Customs documentation support</div>
@@ -133,7 +133,7 @@
         </div>
         <div class="sd-copy">
           <div class="eyebrow">Service 04</div>
-          <h2 class="sec-h2">Piano Movers Windsor &amp; Specialty Moving</h2>
+          <h2 class="sec-h2">Piano &amp; Hot Tub Moving</h2>
           <p>Moving a piano requires skill, precision, and the right equipment. At EC Movers, we specialize in safe and professional <strong>piano moving services in Windsor</strong> and surrounding areas. Our trained movers use proper piano dollies, straps, and protective padding to ensure your instrument is transported without damage.</p>
           <p>Whether it's an upright piano or a grand piano, we handle every move with expert care. We also move pool tables (with full disassembly and reassembly), hot tubs, heavy safes, and other specialty items. Fully insured piano moving services for homes, businesses, and events.</p>
           <div class="sd-features">
@@ -149,8 +149,35 @@
       </div>
     </div>
   </div>
+<!-- SERVICE 5: POOL TABLE -->
+<div id="pool-table" class="service-detail">
+  <div class="wrap">
+    <div class="sd-layout sr">
+      <div class="sd-img">
+        <img src="assets/gallery/poolTable_moving.jpg" alt="Pool Table Moving Service" />
+        <div class="sd-tag">Precision Work</div>
+      </div>
+      <div class="sd-copy">
+        <div class="eyebrow">Service 05</div>
+        <h2 class="sec-h2">Pool Table Moving</h2>
+        <p>Pool table moving requires precision, proper tools, and expert handling. Our team carefully disassembles, transports, and reassembles your pool table to ensure perfect leveling and playability.</p>
+        <p>We handle slate tables, professional setups, and tight-space moves with complete care. Every move includes proper protection, labeling, and reinstallation.</p>
 
-  <!-- SERVICE 5: PACKING & STORAGE -->
+        <div class="sd-features">
+          <div class="sd-feat">Full disassembly &amp; reassembly</div>
+          <div class="sd-feat">Slate handling specialists</div>
+          <div class="sd-feat">Precision leveling</div>
+          <div class="sd-feat">Protective wrapping</div>
+          <div class="sd-feat">Tight space expertise</div>
+          <div class="sd-feat">Residential &amp; commercial</div>
+        </div>
+
+        <a href="#" class="btn btn-primary open-quote">Get a Pool Table Quote →</a>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- SERVICE 6: PACKING & STORAGE -->
   <div id="packing" class="service-detail">
     <div class="wrap">
       <div class="sd-layout flip sr">
@@ -190,7 +217,7 @@
       <div class="fleet-grid">
         <div class="fleet-card sr" data-d="1">
           <div class="fleet-thumb">
-            <img src="assets/sticker.png" alt="20 ft moving truck" class="fleet-img" />
+            <img src="assets/truck2.jpeg" alt="20 ft moving truck" class="fleet-img" />
             <div class="fleet-thumb-badge">Small Moves</div>
           </div>
           <div class="fleet-body">
@@ -209,7 +236,7 @@
         </div>
         <div class="fleet-card sr" data-d="2">
           <div class="fleet-thumb">
-            <img src="assets/truck1.jpeg" alt="20 ft moving truck" class="fleet-img" />
+            <img src="assets/truck2.jpeg" alt="20 ft moving truck" class="fleet-img" />
             
             <div class="fleet-thumb-badge">Most Popular</div>
           </div>
@@ -305,6 +332,115 @@
       </div>
     </div>
   </div>
+
+   <!-- ══════════════════════════════════════════════
+       QUOTE MODAL
+  ══════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-label="Get a Free Quote">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeQuoteModal()" aria-label="Close">✕</button>
+      <div class="eyebrow eyebrow-dark">Free Estimate</div>
+      <h2 class="sec-h2">Get Your Free Quote</h2>
+      <p class="q-sub">Flat-rate pricing, no hidden fees. Hear back within hours.</p>
+      <div class="form-box">
+        <form id="qFormModal" novalidate>
+          <div class="fg-g">
+            <div class="fg"><label for="mfname">First Name *</label><input type="text" id="mfname" name="firstName" placeholder="John" required /></div>
+            <div class="fg"><label for="mlname">Last Name *</label><input type="text" id="mlname" name="lastName" placeholder="Smith" required /></div>
+            <div class="fg"><label for="mphone">Phone *</label><input type="tel" id="mphone" name="phone" placeholder="(519) 566-8933" required /></div>
+            <div class="fg"><label for="memail">Email *</label><input type="email" id="memail" name="email" placeholder="john@example.com" required /></div>
+            <div class="fg"><label for="mfrom">Moving From *</label><input type="text" id="mfrom" name="moveFrom" placeholder="Current city / address" required /></div>
+            <div class="fg"><label for="mto">Moving To *</label><input type="text" id="mto" name="moveTo" placeholder="Destination city / address" required /></div>
+            <div class="fg"><label for="mdate">Preferred Date</label><input type="date" id="mdate" name="moveDate" /></div>
+            <div class="fg">
+              <label for="mservice">Service Type *</label>
+              <select id="mservice" name="serviceType" required>
+                <option value="" disabled selected>Select service</option>
+                <option value="residential">Residential Moving</option>
+                <option value="commercial">Commercial Moving</option>
+                <option value="long-distance">Long Distance Moving</option>
+                <option value="piano">Piano / Hot Tub Moving</option>
+                <option value="pool-table">Pool Table Moving</option>
+                <option value="packing">Packing &amp; Storage</option>
+              </select>
+            </div>
+            <div class="fg fg-full"><label for="mnotes">Notes</label><textarea id="mnotes" name="notes" placeholder="Special items, access details, questions..."></textarea></div>
+          </div>
+          <div class="form-btn">
+            <button type="submit" class="btn btn-primary">🚛 Request My Free Quote →</button>
+          </div>
+          <div id="mfMsg" role="alert"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+   <!-- ══════════════════════════════════════════════
+       MODAL JAVASCRIPT
+  ══════════════════════════════════════════════ -->
+  <script>
+    /* ── Quote Modal ── */
+    function openQuoteModal() {
+      document.getElementById('quoteModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeQuoteModal() {
+      document.getElementById('quoteModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    /* ── Reviews Modal ── */
+    function openReviewsModal() {
+      document.getElementById('reviewsModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeReviewsModal() {
+      document.getElementById('reviewsModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    /* ── Close on overlay click ── */
+    document.addEventListener('click', function(e) {
+      if (e.target.id === 'quoteModal') closeQuoteModal();
+      if (e.target.id === 'reviewsModal') closeReviewsModal();
+    });
+
+    /* ── Close on Escape ── */
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeQuoteModal();
+        closeReviewsModal();
+      }
+    });
+
+    /* ── Modal Quote Form Submission ── */
+    document.addEventListener('DOMContentLoaded', function() {
+      var modalForm = document.getElementById('qFormModal');
+      var mfMsg = document.getElementById('mfMsg');
+      if (modalForm && mfMsg) {
+        modalForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var btn = modalForm.querySelector('button[type="submit"]');
+          var orig = btn.textContent;
+          btn.textContent = 'Sending…';
+          btn.disabled = true;
+          setTimeout(function() {
+            mfMsg.style.display = 'block';
+            mfMsg.style.color = '#1A7A3A';
+            mfMsg.textContent = '✅ Quote request received! We’ll be in touch within a few hours.';
+            modalForm.reset();
+            btn.textContent = orig;
+            btn.disabled = false;
+            setTimeout(function() {
+              mfMsg.style.display = 'none';
+              closeQuoteModal();
+            }, 3500);
+          }, 900);
+        });
+      }
+    });
+  </script>
+
 
   <div id="site-footer"></div>
   <script src="js/components.js"></script>

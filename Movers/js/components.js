@@ -63,9 +63,10 @@
 
     var servicesDrop =
       '<a href="' + base + 'services.html#residential">Residential Moving</a>' +
-      '<a href="' + base + 'services.html#commercial">Commercial Moving</a>' +
-      '<a href="' + base + 'services.html#long-distance">Long Distance</a>' +
-      '<a href="' + base + 'services.html#piano">Piano &amp; Specialty</a>' +
+      '<a href="' + base + 'services.html#commercial">Commercial &amp; Office Moving</a>' +
+      '<a href="' + base + 'services.html#long-distance">Long Distance Moving</a>' +
+      '<a href="' + base + 'services.html#piano">Piano &amp; Hot Tub Moving</a>' +
+      '<a href="' + base + 'services.html#pool-table  ">Pool Table Moving</a>' +
       '<a href="' + base + 'services.html#packing">Packing &amp; Storage</a>';
 
     var locationsDrop =
@@ -115,7 +116,7 @@
       '</nav>' +
 
       '<div class="nav-right">' +
-      '<a href="' + base + 'contact.html" class="btn btn-primary">Get Free Quote</a>' +
+      '<button onclick="openQuoteModal()" class="btn btn-primary">Get Free Quote</button>' +
       '<button class="ham" id="hamBtn" aria-label="Open navigation menu">' +
       '<span></span><span></span><span></span>' +
       '</button>' +
@@ -132,7 +133,7 @@
       '<a href="' + base + 'blog/index.html"     onclick="closeDrawer()">Blog</a>' +
       '<a href="' + base + 'contact.html"        onclick="closeDrawer()">Contact</a>' +
       '<a href="' + PHONE_HREF + '"              onclick="closeDrawer()">&#128222; ' + PHONE_DISPLAY + '</a>' +
-      '<a href="' + base + 'contact.html" class="btn btn-white m-cta" onclick="closeDrawer()">Get Free Quote &rarr;</a>' +
+      '<button class="btn btn-white m-cta" onclick="closeDrawer();openQuoteModal()">Get Free Quote &rarr;</button>' +
       '</div>';
 
     markActive();
@@ -163,9 +164,10 @@
       '<h5>Services</h5>' +
       '<ul>' +
       '<li><a href="' + base + 'services.html#residential">Residential Moving</a></li>' +
-      '<li><a href="' + base + 'services.html#commercial">Commercial Moving</a></li>' +
+      '<li><a href="' + base + 'services.html#commercial">Commercial &amp; Office Moving</a></li>' +
       '<li><a href="' + base + 'services.html#long-distance">Long Distance</a></li>' +
       '<li><a href="' + base + 'services.html#piano">Piano Moving</a></li>' +
+      '<a href="' + base + 'services.html#packing">Pool Table Moving</a>' +
       '<li><a href="' + base + 'services.html#packing">Packing &amp; Storage</a></li>' +
       '</ul>' +
       '</div>' +
