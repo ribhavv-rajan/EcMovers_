@@ -40,7 +40,7 @@
       <h1>Professional Movers<br/>in <span>Kingsville</span>, ON</h1>
       <p>EC Movers Ltd has served Kingsville and surrounding communities since 2015. Fully insured, flat-rate pricing, and a 5.0&#x2605; track record. Kingsville's peaceful community deserves a moving experience just as smooth. EC Movers Ltd serves Kingsville residents and businesses with professional, fully insured moving services.</p>
       <div class="loc-hero-btns">
-        <a href="../contact.html" class="btn btn-white btn-lg">Get a Free Quote</a>
+        <button onclick="openQuoteModal()" class="btn btn-white btn-lg">Get a Free Quote</button>
         <a href="tel:+15195668933" class="btn btn-outline-w btn-lg">&#128222; (519) 566-8933</a>
       </div>
     </div>
@@ -60,7 +60,7 @@
             <li>Same-day &amp; short-notice bookings available</li>
             <li>Packing materials &amp; supplies provided</li>
           </ul>
-          <a href="../contact.html" class="btn btn-primary">Get a Free Kingsville Quote</a>
+          <button onclick="openQuoteModal()" class="btn btn-primary">Get a Free Kingsville Quote</button>
         </div>
         <div class="loc-visual sr sr-r" data-d="2">
           <h3>&#128205; Kingsville Moving Stats</h3>
@@ -134,7 +134,7 @@
       <h2>Ready to Move in Kingsville?</h2>
       <p>Get your free, no-obligation quote from Windsor-Essex's most trusted movers.</p>
       <div class="cta-btns">
-        <a href="../contact.html" class="btn btn-outline-w btn-lg">Get Free Quote</a>
+        <button onclick="openQuoteModal()" class="btn btn-outline-w btn-lg">Get Free Quote</button>
         <a href="tel:+15195668933" class="btn btn-lg" style="background:#fff;color:var(--accent);border-color:#fff">Call Us Now</a>
       </div>
     </div>
@@ -142,5 +142,101 @@
 
   <div id="site-footer"></div>
   <script src="../js/components.js"></script>
+
+  <!-- ══════════════════════════════════════════════
+       QUOTE MODAL
+  ══════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="quoteModal" role="dialog" aria-modal="true" aria-label="Get a Free Quote">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeQuoteModal()" aria-label="Close">✕</button>
+      <div class="eyebrow eyebrow-dark">Free Estimate</div>
+      <h2 class="sec-h2">Get Your Free Quote</h2>
+      <p class="q-sub">Flat-rate pricing, no hidden fees. Hear back within hours.</p>
+      <div class="modal-contact-bar">
+        <a href="tel:+15195668933" class="modal-contact-item">
+          <span class="modal-contact-icon">📞</span>
+          <span>(519) 566-8933</span>
+        </a>
+        <span class="modal-contact-divider"></span>
+        <a href="mailto:eastcanadianmovers@gmail.com" class="modal-contact-item">
+          <span class="modal-contact-icon">✉️</span>
+          <span>eastcanadianmovers@gmail.com</span>
+        </a>
+      </div>
+      <div class="form-box">
+        <form id="qFormModal" novalidate>
+          <div class="fg-g">
+            <div class="fg"><label for="mfname">First Name *</label><input type="text" id="mfname" name="firstName" placeholder="John" required /></div>
+            <div class="fg"><label for="mlname">Last Name *</label><input type="text" id="mlname" name="lastName" placeholder="Smith" required /></div>
+            <div class="fg"><label for="mphone">Phone *</label><input type="tel" id="mphone" name="phone" placeholder="(519) 566-8933" required /></div>
+            <div class="fg"><label for="memail">Email *</label><input type="email" id="memail" name="email" placeholder="john@example.com" required /></div>
+            <div class="fg"><label for="mfrom">Moving From *</label><input type="text" id="mfrom" name="moveFrom" placeholder="Current city / address" required /></div>
+            <div class="fg"><label for="mto">Moving To *</label><input type="text" id="mto" name="moveTo" placeholder="Destination city / address" required /></div>
+            <div class="fg"><label for="mdate">Preferred Date</label><input type="date" id="mdate" name="moveDate" /></div>
+            <div class="fg">
+              <label for="mservice">Service Type *</label>
+              <select id="mservice" name="serviceType" required>
+                <option value="" disabled selected>Select service</option>
+                <option value="residential">Residential Moving</option>
+                <option value="commercial">Commercial Moving</option>
+                <option value="long-distance">Long Distance Moving</option>
+                <option value="piano">Piano / Hot Tub Moving</option>
+                <option value="pool-table">Pool Table Moving</option>
+                <option value="packing">Packing &amp; Storage</option>
+              </select>
+            </div>
+            <div class="fg fg-full"><label for="mnotes">Notes</label><textarea id="mnotes" name="notes" placeholder="Special items, access details, questions..."></textarea></div>
+          </div>
+          <div class="form-btn">
+            <button type="submit" class="btn btn-primary">🚛 Request My Free Quote →</button>
+          </div>
+          <div id="mfMsg" role="alert"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+<script>
+    /* ── Quote Modal ── */
+    function openQuoteModal() {
+      document.getElementById('quoteModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeQuoteModal() {
+      document.getElementById('quoteModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') { closeQuoteModal(); }
+    });
+    document.addEventListener('click', function(e) {
+      if (e.target.id === 'quoteModal') closeQuoteModal();
+    });
+    /* open-quote class trigger */
+    document.querySelectorAll('.open-quote').forEach(function(el) {
+      el.addEventListener('click', function(e) { e.preventDefault(); openQuoteModal(); });
+    });
+    /* ── Modal Quote Form Submission ── */
+    (function() {
+      var modalForm = document.getElementById('qFormModal');
+      var mfMsg = document.getElementById('mfMsg');
+      if (modalForm && mfMsg) {
+        modalForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var btn = modalForm.querySelector('button[type="submit"]');
+          btn.disabled = true;
+          btn.textContent = 'Sending…';
+          setTimeout(function() {
+            mfMsg.style.display = 'block';
+            mfMsg.style.color = '#2f5bff';
+            mfMsg.textContent = '✅ Quote request received! We\'ll be in touch within a few hours.';
+            btn.disabled = false;
+            btn.textContent = '🚛 Request My Free Quote →';
+            modalForm.reset();
+            setTimeout(function() { closeQuoteModal(); mfMsg.style.display = 'none'; }, 3000);
+          }, 900);
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

@@ -848,26 +848,35 @@ nav a.nav-active::after {
 @media (max-width: 1024px) {
   .about-split {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
   .about-split.reverse {
     direction: ltr;
   }
   .sd-layout {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
   .sd-layout.flip {
     direction: ltr;
   }
   .contact-layout {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
   .pillars-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .page-hero {
+    padding: 8rem 0 4rem;
+  }
+  .nav-drop {
+    display: none !important;
+  }
 }
 @media (max-width: 720px) {
   .pillars-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .sd-features {
     grid-template-columns: 1fr;
@@ -876,14 +885,117 @@ nav a.nav-active::after {
     grid-template-columns: 1fr;
   }
   .page-hero h1 {
-    font-size: 2.6rem;
+    font-size: clamp(2.2rem, 7vw, 3rem);
+  }
+  .page-hero p {
+    font-size: 0.95rem;
   }
   .awards-row {
     gap: 1rem;
   }
   .award-badge {
     min-width: 110px;
-    /* padding: 1.2rem 1rem; */
+  }
+  .contact-layout {
+    gap: 2rem;
+  }
+  .map-embed {
+    height: 280px;
+  }
+  .about-split {
+    gap: 2.5rem;
+  }
+  .about-img-float {
+    right: -0.5rem;
+    bottom: -0.5rem;
+    padding: 0.9rem 1.1rem;
+  }
+  .about-img-float .num {
+    font-size: 1.5rem;
+  }
+  .sd-img {
+    font-size: 5rem;
+  }
+  .compare-table th,
+  .compare-table td {
+    padding: 0.75rem 0.9rem;
+    font-size: 0.82rem;
+  }
+  .page-hero {
+    padding: 7rem 0 3.5rem;
+  }
+  .ph-badge {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.8rem;
+  }
+  .breadcrumb {
+    font-size: 0.65rem;
+  }
+}
+@media (max-width: 480px) {
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .page-hero h1 {
+    font-size: clamp(1.9rem, 8.5vw, 2.5rem);
+    line-height: 1.05;
+  }
+  .page-hero {
+    padding: 6.5rem 0 3rem;
+  }
+  .page-hero-meta {
+    gap: 0.7rem;
+    margin-top: 1.4rem;
+  }
+  .fleet-body {
+    padding: 1.4rem;
+  }
+  .fleet-body h3 {
+    font-size: 1.05rem;
+  }
+  .fleet-thumb {
+    height: 170px;
+  }
+  .awards-row {
+    gap: 0.75rem;
+  }
+  .award-badge {
+    min-width: 95px;
+    padding: 1.2rem 1rem;
+  }
+  .award-year {
+    font-size: 1.2rem;
+  }
+  .award-title {
+    font-size: 0.65rem;
+  }
+  .ci-card {
+    padding: 1.1rem;
+    gap: 0.8rem;
+  }
+  .ci-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+  .service-detail {
+    padding: clamp(2rem, 8vw, 4rem) 0;
+  }
+  .sd-img {
+    font-size: 4rem;
+  }
+  .about-split {
+    gap: 2rem;
+  }
+  .pillar {
+    padding: 1.5rem 1rem;
+  }
+  .social-row {
+    gap: 0.5rem;
+  }
+  .soc-btn {
+    font-size: 0.68rem;
+    padding: 0.45rem 0.85rem;
   }
 }
 
