@@ -721,6 +721,74 @@ nav a.nav-active::after {
   flex-shrink: 0;
 }
 
+/* Services Feature Cards */
+/* Section */
+.section-why {
+  background: var(--blue-pale);
+  padding: 4rem 0;
+}
+
+/* Header */
+.section-why .header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-why .sec-h2 {
+  color: var(--blue);
+}
+
+.section-why .header p {
+  color: var(--muted);
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+/* Grid */
+.section-why .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* Card */
+.section-why .card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 1.5rem 1.6rem;
+  border: 1px solid var(--border);
+}
+
+/* Icon */
+.section-why .card .icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.7rem;
+}
+
+/* Title */
+.section-why .card strong {
+  color: var(--blue);
+  display: block;
+  margin-bottom: 0.4rem;
+  font-family: var(--f-head);
+}
+
+/* Text */
+.section-why .card p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.section-why .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(47, 91, 255, 0.1);
+  border-color: var(--accent);
+}
+
 /* ── CONTACT PAGE ────────────────────────────────────────────── */
 .contact-layout {
   display: grid;

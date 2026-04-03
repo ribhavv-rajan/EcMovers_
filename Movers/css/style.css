@@ -248,8 +248,8 @@ img {
 }
 
 .logo-img {
-  width: 170;
-  height: 65px;
+  width: auto;
+  height: 55px;
   transform: translateX(5px) scale(1.1);
   transform-origin: left center;
   /* border-radius: 50%; */
@@ -1830,6 +1830,65 @@ footer {
 }
 #stb:hover {
   background: var(--accent-d);
+}
+
+/* SEO Content Block */
+
+#seo-content {
+  background: var(--blue-pale);
+  padding: 4rem 0;
+}
+
+.seo-container {
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.sec-h2 {
+  color: var(--blue);
+}
+
+#seo-content p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--slate);
+  margin-bottom: 1.2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.feature-box {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid var(--border);
+}
+
+.feature-box .icon {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.feature-box strong {
+  color: var(--blue);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.feature-box span {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(47, 91, 255, 0.1);
+  border-color: var(--accent);
 }
 
 /* ════════════════════════════════════════════════════════════
