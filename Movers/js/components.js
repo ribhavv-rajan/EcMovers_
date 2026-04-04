@@ -26,7 +26,7 @@
   ───────────────────────────────────────────────────────── */
   var PHONE_DISPLAY = '(519) 566-8933';      // ← displayed text
   var PHONE_HREF = 'tel:+15195668933';    // ← tel: link
-  var EMAIL = 'eastcanadianmovers@gmail.com';  // ← email address
+  var EMAIL = 'ecmoversltd@gmail.com';  // ← email address
   var ADDRESS = '4698 Sassafras Ave, Windsor, ON N9G 3E1, Canada';        // ← city shown in footer
 
   /* ─────────────────────────────────────────────────────────
@@ -42,7 +42,7 @@
        once your logo PNG is placed in /assets/logo.png
   ───────────────────────────────────────────────────────── */
   function logoMark() {
-    return '<img src="' + base + 'assets/logo-v.png" class="logo-img" alt="EC Movers Ltd" />';
+    return '<img src="' + base + 'assets/logo-white.png" class="logo-img" alt="EC Movers Ltd" />';
   }
 
   function logoHTML(extraStyle) {
@@ -167,8 +167,8 @@
       '<li><a href="' + base + 'services.html#commercial">Commercial &amp; Office Moving</a></li>' +
       '<li><a href="' + base + 'services.html#long-distance">Long Distance</a></li>' +
       '<li><a href="' + base + 'services.html#piano">Piano Moving</a></li>' +
-      '<a href="' + base + 'services.html#packing">Pool Table Moving</a>' +
       '<li><a href="' + base + 'services.html#packing">Packing &amp; Storage</a></li>' +
+      '<li><a href="' + base + 'services.html#packing">Pool Table Moving</a><li>' +
       '</ul>' +
       '</div>' +
 
@@ -206,7 +206,7 @@
       '<a href="https://www.tiktok.com/@ecmoversltd" class="ft-social-chip" aria-label="TikTok" target="_blank" rel="noopener">' +
       '<img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" width="14" style="vertical-align:middle;"> TikTok</a>' +
 
-      '<a href="#" class="ft-social-chip" aria-label="Google Reviews">' +
+      '<a href="https://maps.app.goo.gl/k7m2pPYfbZFtEWMu9?g_st=iw" class="ft-social-chip" aria-label="Google Reviews">' +
       '<img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" width="14" style="vertical-align:middle;"> Google</a>' +
       '</div>' +
       '</div>' +

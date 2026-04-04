@@ -250,16 +250,18 @@ img {
 .logo-img {
   width: auto;
   height: 55px;
+  filter: none;
   transform: translateX(5px) scale(1.1);
   transform-origin: left center;
   /* border-radius: 50%; */
   object-fit: fill;
   /* background: var(--accent); */
   /* border: 1px solid white; */
-  transition: border-color 0.3s;
+  /* transition: filter 0.3s ease; */
 }
 #nav.stuck .logo-img {
-  border-color: var(--border);
+  filter: brightness(0) saturate(100%) invert(29%) sepia(23%) saturate(1489%)
+    hue-rotate(180deg) brightness(99%) contrast(95%);
 }
 
 .logo-mark {

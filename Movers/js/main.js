@@ -119,18 +119,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const data = Object.fromEntries(new FormData(qForm));
 
       try {
-        /*
-         * TODO: Replace with real API call:
-         *
-         * const res = await fetch('/api/quote', {
-         *   method: 'POST',
-         *   headers: { 'Content-Type': 'application/json' },
-         *   body: JSON.stringify(data),
-         * });
-         * if (!res.ok) throw new Error('Server error');
-         */
+        const res = await fetch('/api/quote', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
 
-        await new Promise(resolve => setTimeout(resolve, 1000)); // demo delay
+        const result = await res.json();
+
+        if (!res.ok) {
+          throw new Error(result.message || 'Server error');
+        }
 
         fMsg.style.display = 'block';
         fMsg.style.color = '#1A7A3A';
